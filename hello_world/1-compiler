@@ -1,0 +1,2 @@
+#!/bin/bash
+gcc -ffreestanding -nostdlib -nostartfiles $CFILE -o ${$CFILE%.*}.o
