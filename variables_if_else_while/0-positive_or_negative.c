@@ -5,7 +5,7 @@
 /**
  * main - main function for task 0
  *
- * Return - always zero
+ * Return - 0 - always
  */
 
 int main(void)
