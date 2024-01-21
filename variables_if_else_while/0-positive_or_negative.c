@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - main function for task 0
+ * main - entry point
  *
- * Return - 0 - always
+ * Return - 0 Successful, always
  */
 
 int main(void)
