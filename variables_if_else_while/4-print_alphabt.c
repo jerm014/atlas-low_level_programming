@@ -15,7 +15,7 @@ int main(void)
 	int e = 101;
 
 	for (n = 97; n < 123; n++)
-		if ( n != e && n != q)
+		if (n != e && n != q)
 			putchar(n);
 
 	putchar(10);
