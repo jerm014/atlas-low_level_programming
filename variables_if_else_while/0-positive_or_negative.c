@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
  * main - main function for task 0
@@ -10,7 +11,6 @@
 int main(void)
 {
 	int n;
-	char msg[];
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -23,20 +23,19 @@ int main(void)
 	*/
 	if ( n>0 ) 
 	{
-		msg = "is positive"
+		printf("%d is positive\n", n);
 	}
 	else
 	{
 		if ( n<0 )
 		{
-			msg = " is negative"
+			printf("%d is negative\n", n);
 		}
 		else
 		{
-			msg = " is zero"
+			printf("%d is zero\n", n);
 		}
 	}
-	printf("%d %s",n, msg);
 
 	return (0);
 }
