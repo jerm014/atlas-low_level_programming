@@ -12,10 +12,10 @@ int main(void)
 {
 	int n;
 	int q = 113;
-	int o = 111;
+	int e = 101;
 
 	for (n = 97; n < 123; n++)
-		if ( n != o && n != q)
+		if ( n != e && n != q)
 			putchar(n);
 
 	putchar(10);
