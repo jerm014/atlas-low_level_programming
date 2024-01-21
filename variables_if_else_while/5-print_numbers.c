@@ -14,7 +14,7 @@ int main(void)
 	int zero = 48;
 	int nine = 57;
 
-	for (n = zero; n =< nine; n++)
+	for (n = zero; n <= nine; n++)
 		putchar(n);
 
 	putchar(10);
