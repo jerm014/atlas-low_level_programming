@@ -6,7 +6,7 @@
  */
 
 void print_alphabet(void)
-{	
+{
 	int a = 97;
 	int z = 122;
 	int nn;
