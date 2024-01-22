@@ -11,6 +11,7 @@
 int main(void)
 {
 	int n;
+	int space = 32;
 	int comma = 44;
 	int zero = 48;
 	int nine = 57;
@@ -19,7 +20,10 @@ int main(void)
 	{
 		putchar(n);
 		if (n < nine)
+		{
 			putchar(comma);
+			putchar(space);
+		}
 	}
 
 	putchar(10);
