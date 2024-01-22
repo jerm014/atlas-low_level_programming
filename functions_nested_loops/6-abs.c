@@ -1,20 +1,6 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - print the alphabet ten times
- *
- */
-
-void print_alphabet_x10(void)
-{
-	int nn;
-
-	for (nn = 1; nn <= 10; nn++)
-		print_alphabet();
-
-}
-
-/**
  * _islower - tells if an ascii is a lowercase or not
  *
  * @c: a letter or something.
