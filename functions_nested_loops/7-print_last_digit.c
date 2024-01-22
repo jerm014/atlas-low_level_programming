@@ -102,4 +102,6 @@ int print_last_digit(int n)
 	ld = _abs(n % 10);
 
 	_putchar(ld + 48);
+
+	return (ld);
 }
