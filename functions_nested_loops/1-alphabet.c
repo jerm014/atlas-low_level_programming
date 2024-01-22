@@ -3,7 +3,7 @@
 /**
  * print_alphabet - print a to z
  *
- * Return: 0 always a zero
+ * Return: void
  */
 
 void print_alphabet(void)
@@ -18,5 +18,5 @@ void print_alphabet(void)
 	}
 	_putchar('\n');
 
-	return (0);
+	return void;
 }
