@@ -75,7 +75,7 @@ int _isalpha(int c)
 /**
  * print_sign - print the postiveness or negativeness of a number
  *
- * @c: a number or something
+ * @n: a number or something
  *
  * Return: 1 if postiveness
  *         0 if zeroness
