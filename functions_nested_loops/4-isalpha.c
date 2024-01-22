@@ -54,7 +54,7 @@ int _islower(int c)
 }
 
 /**
- * _isaplha - tells if an ascii is a letter or not
+ * _isalpha - tells if an ascii is a letter or not
  *
  * @c: a letter or something.
  *
