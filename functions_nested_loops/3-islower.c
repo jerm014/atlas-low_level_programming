@@ -37,7 +37,7 @@ int _islower(int c)
 	int a = 97;
 	int z = 122;
 
-	if (c > 122)
+	if (c => a && c =< z)
 		return (1);
 	else
 		return (0);
