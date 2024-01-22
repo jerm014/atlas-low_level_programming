@@ -114,11 +114,11 @@ void jack_bauer(void)
 				{
 					if ((h1 == 0 || h1 == 1) || ((h1 = 2) && (h2 <= 3)))
 					{
-						_putchar(h1+48);
-						_putchar(h2+48);
+						_putchar(h1 + 48);
+						_putchar(h2 + 48);
 						_putchar(':');
-						_putchar(m1+48);
-						_putchar(m2+48);
+						_putchar(m1 + 48);
+						_putchar(m2 + 48);
 						_putchar(10);
 					}
 				}
