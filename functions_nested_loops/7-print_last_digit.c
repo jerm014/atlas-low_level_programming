@@ -95,11 +95,11 @@ int _abs(int nn)
  * Return: the last digit of a number.
  *
  */
-int print_last_digit(int n)
+int print_last_digit(int nn)
 {
 	int ld;
 
-	ld = _abs(n % 10);
+	ld = _abs(nn % 10);
 
 	_putchar(ld + 48);
 
