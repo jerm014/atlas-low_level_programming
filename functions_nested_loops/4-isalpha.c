@@ -69,7 +69,7 @@ int _islower(int c)
 
 int _isalpha(int c)
 {
-	if ((c =< a && c => z) && (c =< A && a => Z))
+	if ((c <= a && c >= z) && (c <= A && a >= Z))
 		return (1);
 	else
 		return (0);
