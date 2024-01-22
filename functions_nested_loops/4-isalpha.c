@@ -1,10 +1,5 @@
 #include "main.h"
 
-int a = 97;
-int z = 122;
-int A = 65;
-int Z = 90;
-
 /**
  * print_alphabet - print a to z
  *
@@ -69,7 +64,8 @@ int _islower(int c)
 
 int _isalpha(int c)
 {
-	if ((c >= a && c <= z) || (c >= A && c <= Z))
+
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	else
 		return (0);
