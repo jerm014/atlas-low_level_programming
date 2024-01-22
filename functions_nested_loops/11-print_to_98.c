@@ -144,7 +144,7 @@ void print_to_98(int n)
 	}
 	else
 	{
-		for (starnumber = n; startnumber > 98; startnumber--)
+		for (startnumber = n; startnumber > 98; startnumber--)
 			printf("%d", startnumber);
 		printf("98");
 	}
