@@ -73,7 +73,7 @@ int print_sign(int n)
 /**
  * _abs - compute the absolute value of an integer
  *
- * @n: a number
+ * @nn: a number
  *
  * Return: the absolute value of the integer argument, of the
  *         appropriate integer type for the function.
