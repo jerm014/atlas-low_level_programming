@@ -81,8 +81,8 @@ int print_sign(int n)
 
 int _abs(int nn)
 {
-	if (nn >= 0 )
+	if (nn >= 0)
 		return (nn);
 	else
-		return (nn*-1);
+		return (nn * -1);
 }
