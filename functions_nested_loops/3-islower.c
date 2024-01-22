@@ -32,6 +32,13 @@ void print_alphabet_x10(void)
 
 }
 
+/**
+ * _islower - tells if an ascii is a lowercase or not
+ *
+ * Return: 1 if lowercase
+ *         0 is uppercase
+ */
+
 int _islower(int c)
 {
 	int a = 97;
