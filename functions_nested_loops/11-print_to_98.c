@@ -13,7 +13,9 @@ void print_to_98(int n)
 	int startnumber;
 
 	if (n == 98)
+	{
 		printf("98");
+	}
 	else if (n < 98)
 	{
 		for (startnumber = n; startnumber < 98; startnumber++)
