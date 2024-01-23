@@ -10,9 +10,9 @@
 int main(void)
 {
 	int a;
-	long f1;
-	long f2;
-	long fo;
+	double f1;
+	double f2;
+	double fo;
 
 	f1 = 0;
 	f2 = 1;
@@ -21,7 +21,7 @@ int main(void)
 	for (a = 1; a <= 98; a++)
 	{
 		fo = (f1 + f2);
-		printf("%ld", fo);
+		printf("%0.0lf", fo);
 		f1 = f2;
 		f2 = fo;
 		if (a < 98)
