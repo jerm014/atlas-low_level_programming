@@ -24,7 +24,7 @@ int main(void)
 		printf("%ld", fo);
 		f1 = f2;
 		f2 = fo;
-		if (a < 50)
+		if (a < 98)
 			printf(", ");
 	}
 	printf("\n");
