@@ -17,8 +17,9 @@ int main(void)
 	for (a = 1; a <= 50; a++)
 	{
 		f =+ a;
-		printf("%d, \n", f);
+		printf("%d, ", f);
 	}
+	printf("\n");
 
 	return (1);
 }
