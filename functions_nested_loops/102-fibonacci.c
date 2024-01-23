@@ -10,14 +10,20 @@
 int main(void)
 {
 	int a;
-	int f;
+	int f1;
+	int f2;
+	int fo;
 
-	f = 0;
+	f1 = 0;
+	f2 = 1;
+	fo = 0;
 
 	for (a = 1; a <= 50; a++)
 	{
-		f += a;
-		printf("%d, ", f);
+		fo = (f1 + f2);
+		printf("%d, ", fo);
+		f1 = f2;
+		f2 = fo;
 	}
 	printf("\n");
 
