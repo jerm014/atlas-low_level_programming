@@ -9,31 +9,44 @@
 
 int main(void)
 {
-	int a;
-	double f1;
-	double f2;
-	double fo;
-	int f981;
-	int f982;
-	int f983;
+	int count;
+	unsigned long fOne = 0, fTwo = 1, sum;
+	unsigned long fOneHalfOne, fOneHalfTwo, fTwoHalfOne, fTwoHalfTwo;
+	unsigned long halfOne, halfTwo;
 
-	f1 = 0;
-	f2 = 1;
-	fo = 0;
-	f981 = 2189229;
-	f982 = 9583455;
-	f983 = 5187200;
-
-	for (a = 1; a <= 97; a++)
+	for (count = 0; count < 92; count++)
 	{
-		fo = (f1 + f2);
-		printf("%0.0f", fo);
-		f1 = f2;
-		f2 = fo;
-		if (a < 97)
-			printf(", ");
-	}
-	printf(", %d%d%d\n", f981, f982, f983);
+		sum = fOne + fTwo;
+		printf("%lu, ", sum);
 
+		fOne = fTwo;
+		fTwo = sum;
+	}
+
+	fOneHalfOne = fOne / 10000000000;
+	fTwoHalfOne = fTwo / 10000000000;
+	fOneHalfTwo = fOne % 10000000000;
+	fTwoHalfTwo = fTwo % 10000000000;
+
+	for (count = 93; count < 99; count++)
+	{
+		halfOne = fOneHalfOne + fTwoHalfOne;
+		halfTwo = fOneHalfTwo + fTwoHalfTwo;
+		if (fOneHalfTwo + fTwoHalfTwo > 9999999999)
+		{
+			halfOne += 1;
+			halfTwo %= 10000000000;
+		}
+
+		printf("%lu%lu", halfOne, halfTwo);
+		if (count != 98)
+			printf(", ");
+
+		fOneHalfOne = fTwoHalfOne;
+		fOneHalfTwo = fTwoHalfTwo;
+		fTwoHalfOne = halfOne;
+		fTwoHalfTwo = halfTwo;
+	}
+	printf("\n");
 	return (0);
 }
