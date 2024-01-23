@@ -21,7 +21,7 @@ int main(void)
 	for (a = 1; a <= 98; a++)
 	{
 		fo = (f1 + f2);
-		printf("%0.0lf", fo);
+		printf("%0.0f", fo);
 		f1 = f2;
 		f2 = fo;
 		if (a < 98)
