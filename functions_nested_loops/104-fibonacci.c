@@ -16,7 +16,7 @@ int main(void)
 	for (a = 0; a < 92; a++)
 	{
 		fsum = f1 + f2;
-		printf("%lf, ", fsum);
+		printf("%lu, ", fsum); /* unsigned long is %lu */
 
 		f1 = f2; /* rotate for next */
 		f2 = fsum;
@@ -36,7 +36,7 @@ int main(void)
 			half1 += 1;
 			half2 %= 10000000000;
 		}
-		printf("%lf%lf", half1, half2);
+		printf("%lu%lu", half1, half2); /* unsigned long is %lu */
 		if (a != 98)
 			printf(", ");
 
