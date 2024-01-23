@@ -8,7 +8,7 @@
  *
  */
 
-int main()
+void main(void)
 {
 	int outcome[1024];
 	int a;
