@@ -33,7 +33,7 @@ int main(void)
 		if (a < 97)
 			printf(", ");
 	}
-	printf(",%d%d%d\n", f981, f982, f983);
+	printf(", %d%d%d\n", f981, f982, f983);
 
 	return (0);
 }
