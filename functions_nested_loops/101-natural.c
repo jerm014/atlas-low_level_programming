@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-  
+
 /**
  * main - main entry point
  *
@@ -15,11 +15,11 @@ int main(void)
 	int sum_of_factors;
 
 	sum_of_factors = 0;
-    
+
 	for (a = 1; a <= 1024; a++)
 		outcome[a] = 0;
-        
- 	for (a = 1; a <= 1024; a++)
+
+	for (a = 1; a <= 1024; a++)
 	{
 		if ((3 * a) <= 1024)
 		{
@@ -31,7 +31,7 @@ int main(void)
 		}
 	}
 
-	for (a = 1; a <=1024; a++)
+	for (a = 1; a <= 1024; a++)
 	{
 		sum_of_factors += (a * outcome[a]);
 	}
