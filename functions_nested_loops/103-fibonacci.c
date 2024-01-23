@@ -22,7 +22,7 @@ int main(void)
 
 	for (a = 1; a != 0;)
 	{
-                fo = (f1 + f2);
+		fo = (f1 + f2);
 		if (fo < 4000000)
 		{
 			if ((fo % 2) == 0)
