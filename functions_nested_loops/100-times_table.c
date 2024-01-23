@@ -92,6 +92,8 @@ void print_times_table(int n)
 /**
  * print_three_digits_or_not - pad a number with spaces, up to three digits.
  *
+ * @n: the number you want printed with spaces. should be less than 999.
+ *
  * Return: nothing
  *
  */
