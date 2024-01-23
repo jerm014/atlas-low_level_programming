@@ -56,13 +56,16 @@ void times_table(void)
 
 void print_times_table(int n)
 {
-	if ((n >=0) && (n <= 15))
+	int a;
+	int b;
+
+	if ((n >= 0) && (n <= 15))
 	{
 		for (a = 0; a <= n; a++)
 		{
 			for (b = 0; b <= n; b++)
 			{
-				if (a = 0)
+				if (a == 0)
 				{
 					_putchar('0');
 					_putchar(',');
