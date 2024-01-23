@@ -21,7 +21,7 @@ int main(void)
 	for (a = 1; a <= 50; a++)
 	{
 		fo = (f1 + f2);
-		printf("%d, ", fo);
+		printf("%ld, ", fo);
 		f1 = f2;
 		f2 = fo;
 	}
