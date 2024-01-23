@@ -22,10 +22,10 @@ int main(void)
 		f2 = fsum;
 	}
 
-	f1A = f1 / 10000000000;
-	f2A = f2 / 10000000000;
-	f1B = f1 % 10000000000;
-	f2B = f2 % 10000000000;
+	f1A = f1 / 10000000000;  // get the first half of f1
+	f2A = f2 / 10000000000;  // get the first half of f2
+	f1B = f1 % 10000000000;  // get the lower half of f1
+	f2B = f2 % 10000000000;  // get the lower half of f2
 
 	for (a = 93; a < 99; a++)
 	{
