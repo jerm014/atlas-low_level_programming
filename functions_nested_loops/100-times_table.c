@@ -65,7 +65,7 @@ void print_times_table(int n)
 		{
 			for (b = 0; b <= n; b++)
 			{
-				if (a == 0)
+				if (b == 0)
 				{
 					_putchar('0');
 					_putchar(',');
