@@ -8,7 +8,7 @@
  *
  */
 
-void main(void)
+int main(void)
 {
 	int outcome[1024];
 	int a;
@@ -36,4 +36,6 @@ void main(void)
 		sum_of_factors += (a * outcome[a]);
 	}
 	printf("%d\n", sum_of_factors);
+
+	return (0);
 }
