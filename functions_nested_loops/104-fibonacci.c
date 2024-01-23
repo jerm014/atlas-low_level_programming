@@ -31,10 +31,10 @@ int main(void)
 	{
 		half1 = f1A + f2A;
 		half2 = f1B + f2B;
-		if (f1B + f2B > 9999999999)
+		if (f1B + f2B > 9999999999) /* the second half is oversized. */
 		{
-			half1 += 1;
-			half2 %= 10000000000;
+			half1 += 1; /* increase the left half by one */
+			half2 %= 10000000000; /* take the leading 1 off the right half */
 		}
 		printf("%lu%lu", half1, half2); /* unsigned long is %lu */
 		if (a != 98)
