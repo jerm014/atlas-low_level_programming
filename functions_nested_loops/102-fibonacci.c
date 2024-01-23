@@ -10,9 +10,9 @@
 int main(void)
 {
 	int a;
-	int f1;
-	int f2;
-	int fo;
+	long f1;
+	long f2;
+	long fo;
 
 	f1 = 0;
 	f2 = 1;
