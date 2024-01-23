@@ -10,23 +10,23 @@
 int main(void)
 {
 	int count;
-	unsigned long fOne = 0, fTwo = 1, sum;
+	unsigned long f1 = 0, f2 = 1, fsum;
 	unsigned long fOneHalfOne, fOneHalfTwo, fTwoHalfOne, fTwoHalfTwo;
 	unsigned long halfOne, halfTwo;
 
 	for (count = 0; count < 92; count++)
 	{
-		sum = fOne + fTwo;
-		printf("%lu, ", sum);
+		fsum = f1 + f2;
+		printf("%lu, ", fsum);
 
-		fOne = fTwo;
-		fTwo = sum;
+		f1 = f2;
+		f1 = fsum;
 	}
 
-	fOneHalfOne = fOne / 10000000000;
-	fTwoHalfOne = fTwo / 10000000000;
-	fOneHalfTwo = fOne % 10000000000;
-	fTwoHalfTwo = fTwo % 10000000000;
+	fOneHalfOne = f1 / 10000000000;
+	fTwoHalfOne = f2 / 10000000000;
+	fOneHalfTwo = f1 % 10000000000;
+	fTwoHalfTwo = f2 % 10000000000;
 
 	for (count = 93; count < 99; count++)
 	{
