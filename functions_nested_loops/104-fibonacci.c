@@ -9,44 +9,45 @@
 
 int main(void)
 {
-	int count;
-	unsigned long fOne = 0, fTwo = 1, sum;
-	unsigned long fOneHalfOne, fOneHalfTwo, fTwoHalfOne, fTwoHalfTwo;
-	unsigned long halfOne, halfTwo;
+	int a;
+	unsigned long f1 = 0, f2 = 1, fsum;
+	unsigned long f1A, f1B, f2A, f2B;
+	unsigned long half1, half2;
 
-	for (count = 0; count < 92; count++)
+	for (a = 0; a < 92; a++)
 	{
-		sum = fOne + fTwo;
-		printf("%lu, ", sum);
+		fsum = f1 + f2;
+		printf("%lu, ", fsum);
 
-		fOne = fTwo;
-		fTwo = sum;
+		f1 = f2;
+		f2 = fsum;
 	}
 
-	fOneHalfOne = fOne / 10000000000;
-	fTwoHalfOne = fTwo / 10000000000;
-	fOneHalfTwo = fOne % 10000000000;
-	fTwoHalfTwo = fTwo % 10000000000;
+	f1A = f1 / 10000000000;
+	f2A = f2 / 10000000000;
+	f1B = f1 % 10000000000;
+	f2B = f2 % 10000000000;
 
-	for (count = 93; count < 99; count++)
+	for (a = 93; a < 99; a++)
 	{
-		halfOne = fOneHalfOne + fTwoHalfOne;
-		halfTwo = fOneHalfTwo + fTwoHalfTwo;
-		if (fOneHalfTwo + fTwoHalfTwo > 9999999999)
+		half1 = f1A + f2A;
+		half2 = f1B + f2B;
+		if (f1B + f2B > 9999999999)
 		{
-			halfOne += 1;
-			halfTwo %= 10000000000;
+			half1 += 1;
+			half2 %= 10000000000;
 		}
 
-		printf("%lu%lu", halfOne, halfTwo);
-		if (count != 98)
+		printf("%lu%lu", half1, half2);
+		if (a != 98)
 			printf(", ");
 
-		fOneHalfOne = fTwoHalfOne;
-		fOneHalfTwo = fTwoHalfTwo;
-		fTwoHalfOne = halfOne;
-		fTwoHalfTwo = halfTwo;
+		f1A = f2A;
+		f1B = f2B;
+		f2A = half1;
+		f2B = half2;
 	}
 	printf("\n");
+
 	return (0);
 }
