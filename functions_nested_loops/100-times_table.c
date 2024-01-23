@@ -110,7 +110,7 @@ void print_three_digits_or_not(int n)
 	else if (n <= 999)
 	{
 		_putchar((n / 100) + 48);
-		_putchar((n / 10) + 48);
+		_putchar(((x / 10) % 10) + 48);
 		_putchar((n % 10) + 48);
 	}
 	else
