@@ -25,7 +25,9 @@ int main(void)
                 fo = (f1 + f2);
 		if (fo < 4000000)
 		{
-			foo += fo;
+			if ((fo % 2) == 0)
+				foo += fo;
+
 			f1 = f2;
 			f2 = fo;
 			if ((f1 + f2) > 4000000)
