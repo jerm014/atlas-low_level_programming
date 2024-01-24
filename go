@@ -3,8 +3,10 @@
 #chmod 755 $2
 git add --all
 #chmod u+x $1
+@echo off
 echo "Commit Message: "
 read
+echo on
 # next line needed for windows
 # git update-index --chmod=+x $2
 git commit -m "$REPLY"
