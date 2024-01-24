@@ -4,7 +4,7 @@
 echo -e "\n>>> git add --all <<<\n"
 git add --all
 #chmod u+x $1
-echo -e "Commit Message: "
+echo -n "Commit Message: "
 read
 # next line needed for windows
 # git update-index --chmod=+x $2
