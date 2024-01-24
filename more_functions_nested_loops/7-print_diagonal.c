@@ -18,7 +18,7 @@ void print_diagonal(int lineLength)
 	{
 		_putchar('\\');
 		_putchar('\n');
-		
+
 		for (countA = 1; countA <= (lineLength - 1) ; countA++)
 		{
 			for (countB = 1; countB <= countA; countB++)
@@ -31,6 +31,6 @@ void print_diagonal(int lineLength)
 	}
 
 	if (lineLength <= 0)
-	       	_putchar('\n');
+		_putchar('\n');
 
 }
