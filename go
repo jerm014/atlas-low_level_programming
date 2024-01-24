@@ -12,4 +12,4 @@ echo -e "\n>>>  git commit -m \"$REPLY\" <<<\n"
 git commit -m "$REPLY"
 echo -e "\n>>> git push <<<\n"
 git push
-echo -e "\n"
+echo ""
