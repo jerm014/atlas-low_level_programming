@@ -3,7 +3,7 @@
 #chmod 755 $2
 git add --all
 #chmod u+x $1
-@echo off
+echo off
 echo "Commit Message: "
 read
 echo on
