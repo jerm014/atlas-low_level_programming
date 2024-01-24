@@ -7,7 +7,7 @@
  * @num2: the number to multiply with num1
  *
  * Return: 0 (is much success!)
- *         
+ * 
  */
 
 int mul(int num1, int num2)
