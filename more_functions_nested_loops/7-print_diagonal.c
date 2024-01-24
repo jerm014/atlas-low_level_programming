@@ -29,6 +29,6 @@ void print_diagonal(int lineLength)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	/* _putchar('\n'); */
 
 }
