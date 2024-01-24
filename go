@@ -5,5 +5,5 @@ git add --all
 chmod u+x $1
 # next line needed for windows
 # git update-index --chmod=+x $2
-git commit -m "$(date)"
+git commit -m "(read)"
 git push
