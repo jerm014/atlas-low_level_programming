@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_line- function that prints a line that is n characters long
+ * print_line-  function that prints a line that is n characters long
  *
- * @n:         the length of the line
+ * @lineLength: the length of the line
  *
- * Return:     nothing
+ * Return:      nothing
  *
  */
 
