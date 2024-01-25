@@ -8,7 +8,7 @@
  *           numbers that are multiples of both three and five print the word
  *           FizzBuzz instead of the number.
  *
- * Return:   nothing
+ * Return:   0 success
  *
  */
 
@@ -32,4 +32,5 @@ int main(void)
 	
 	printf("\n");
 
+	return (0);
 }
