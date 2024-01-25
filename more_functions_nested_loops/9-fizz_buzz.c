@@ -18,7 +18,7 @@ int main(void)
 
 	for (count = 1; count <= 100 ; count++)
 	{
-		if ((count % 3 == 0) && (count % 5 == 0)) 
+		if ((count % 3 == 0) && (count % 5 == 0))
 			printf("FizzBuzz");
 		else if (count % 3 == 0)
 			printf("Fizz");
@@ -29,7 +29,7 @@ int main(void)
 		if (count < 100)
 			printf(" ");
 	}
-	
+
 	printf("\n");
 
 	return (0);
