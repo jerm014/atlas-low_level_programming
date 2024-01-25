@@ -12,7 +12,7 @@
  *
  */
 
-void main(void)
+int main(void)
 {
 	int count;
 
