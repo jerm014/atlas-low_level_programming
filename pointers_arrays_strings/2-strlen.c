@@ -19,7 +19,7 @@ int _strlen(char *s)
 	while (chr != 0)
 	{
 		chr = s[pos];
-		if (chr != 0) 
+		if (chr != 0)
 			pos++;
 	}
 
