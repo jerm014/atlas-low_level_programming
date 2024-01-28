@@ -19,7 +19,8 @@ int _strlen(char *s)
 	while (chr != 0)
 	{
 		chr = s[pos];
-		pos++;
+		if (chr != 0) 
+			pos++;
 	}
 
 	return (pos);
