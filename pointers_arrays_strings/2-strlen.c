@@ -12,8 +12,8 @@
 int _strlen(char *s)
 {
 	int chr;
-	int pos;
-	
+	int pos = 0;
+
 	chr = s[pos];
 
 	while (chr != 0)
