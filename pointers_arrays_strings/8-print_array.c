@@ -16,10 +16,10 @@ void print_array(int *numbers, int length)
 {
 	int position;
 
-	for (position = 0; position <= length; position++)
+	for (position = 0; position < length; position++)
 	{
 		printf("%d", numbers[position]);
-		if (position != length)
+		if (position != (length - 1))
 			printf(", ");
 	}
 	printf("\n");
