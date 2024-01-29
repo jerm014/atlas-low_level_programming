@@ -11,7 +11,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	const true = 1;
+	bool true = 1;
 	int position=0;
 	bool exit = 0;
 
