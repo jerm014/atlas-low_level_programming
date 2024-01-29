@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- *
  * print_array- print up to some number of items from an array
  *
  * @numbers:    the array to get the numbers from
