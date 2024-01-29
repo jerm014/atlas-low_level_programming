@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 
 /**
  * _strcpy-  copy a string
@@ -11,7 +12,6 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	bool true = 1;
 	int position=0;
 	bool exit = 0;
 
