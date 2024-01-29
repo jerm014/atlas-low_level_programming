@@ -35,10 +35,10 @@ void print_rev(char *s)
 
 int _strlen(char *s)
 {
-        int pos = 0;
+	int pos = 0;
 
-        while (s[pos] != 0)
-                pos++;
+	while (s[pos] != 0)
+		pos++;
 
-        return (pos);
+	return (pos);
 }
