@@ -7,6 +7,6 @@
 	void print_rev(char *s);
 	void rev_string(char *str);
 	void copied_jerm014(char *n);
-	void _puts2(char *str);
+	void puts2(char *str);
 
 	#endif
