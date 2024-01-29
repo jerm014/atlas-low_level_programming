@@ -9,5 +9,6 @@
 	void copied_jerm014(char *n);
 	void puts2(char *str);
 	void puts_half(char *str);
+	void print_array(int *numbers, int length);
 
 	#endif
