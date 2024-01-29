@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts- print an entire string
+ * puts2- print half an entire string
  *
  * @str: the string to print
  *
