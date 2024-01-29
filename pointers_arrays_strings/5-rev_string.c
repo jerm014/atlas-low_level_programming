@@ -13,19 +13,18 @@ void rev_string(char *str)
 {
 	int len;
 	int pos;
-	int strpos = 0;
+	int revpos;
 	char *out = str;
 
-	len = _strlen(str);
+	len = _strlen(str) - 1;
+	revpos = len - 1;
 
-	for (pos = (len - 1); pos >= 0; pos--)
+	for (pos = 0 ; pos <= len; pos++)
 	{
-		/* str[strpos] = out[pos]; */
-		out[pos] = str[strpos];
-		strpos++;
+		str[pos] = out[revpos]; 
+		revpos--;
 	}
 
-	*str = out;
 }
 
 
