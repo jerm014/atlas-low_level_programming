@@ -13,16 +13,15 @@ void rev_string(char *str)
 {
 	int len;
 	int pos;
-	int revpos;
-	char *out = str;
-
-	len = _strlen(str) - 1;
-	revpos = len - 1;
-
-	for (pos = 0 ; pos <= len; pos++)
+	char temp;
+	
+	len = _strlen(str);
+	
+	for (pos = 0 ; pos <= (len / 2); pos++)
 	{
-		str[pos] = out[revpos]; 
-		revpos--;
+		temp = str[pos];
+		str[pos] = str[len - pos];
+		str[len (pos + 1)] = temp;
 	}
 
 }
