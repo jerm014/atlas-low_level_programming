@@ -20,7 +20,8 @@ void rev_string(char *str)
 
 	for (pos = (len - 1); pos >= 0; pos--)
 	{
-		str[strpos] = out[pos];
+		/* str[strpos] = out[pos]; */
+		out[pos] = str[strpos];
 		strpos++;
 	}
 
