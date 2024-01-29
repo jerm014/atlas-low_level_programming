@@ -3,7 +3,7 @@
 /**
  * _puts- print an entire string
  *
- * @s: the string to print
+ * @str: the string to print
  *
  * Return: nothing
  *
