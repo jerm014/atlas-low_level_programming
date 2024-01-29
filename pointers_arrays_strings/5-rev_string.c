@@ -25,6 +25,7 @@ void rev_string(char *str)
 		strpos++;
 	}
 
+	*str = out;
 }
 
 
