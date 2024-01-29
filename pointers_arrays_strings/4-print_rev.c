@@ -9,7 +9,7 @@
  *
  */
 
-void print_rev(char *s)
+void print_rev(char *str)
 {
 	int len;
 	int pos;
@@ -27,17 +27,17 @@ void print_rev(char *s)
 /**
  * _strlen-  determine the length of a string
  *
- * @s:       the string to find the longness of
+ * @str:       the string to find the longness of
  *
  * Return:   the longness of the string
  *
  */
 
-int _strlen(char *s)
+int _strlen(char *str)
 {
 	int pos = 0;
 
-	while (s[pos] != 0)
+	while (str[pos] != 0)
 		pos++;
 
 	return (pos);
