@@ -9,7 +9,7 @@
  *
  */
 
-void _puts22(char *str)
+void _puts2(char *str)
 {
 	int pos = 0;
 
