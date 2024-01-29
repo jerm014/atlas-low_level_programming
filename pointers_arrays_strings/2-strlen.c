@@ -11,17 +11,10 @@
 
 int _strlen(char *s)
 {
-	int chr;
 	int pos = 0;
 
-	chr = s[pos];
-
-	while (chr != 0)
-	{
-		chr = s[pos];
-		if (chr != 0)
-			pos++;
-	}
+	while (s[pos] != 0)
+		pos++;
 
 	return (pos);
 }
