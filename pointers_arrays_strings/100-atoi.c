@@ -36,7 +36,7 @@ int _atoi(char *s)
 			else if ((s[position] >= '0') && (s[position] <='9'))
 			{
 				if (result == 147483648)
-					return (-2147483648)
+					return (-2147483648);
 
 				result += (s[position] - '0') * place;
 				if (place < 1000000000) 
