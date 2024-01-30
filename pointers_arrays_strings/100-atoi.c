@@ -4,7 +4,7 @@
 /**
  * _atoi- convert a string to an integer. find the integer within the string.
  *
- * @str: the string to convert
+ * @s: the string to convert
  *
  * Return: an integer found inside the string
  *
