@@ -35,7 +35,10 @@ int _atoi(char *s)
 			else if ((s[position] >= '0') && (s[position] <='9'))
 			{
 				result += (s[position] - '0') * place;
-				place *= 10;
+				if (place < 1000000000) 
+					place *= 10;
+				else
+					exit = true;
 			}
 			else
 			{
