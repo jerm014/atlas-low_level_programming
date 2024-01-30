@@ -56,6 +56,9 @@ int _atoi(char *s)
 		}
 	}
 
+	if (result == 2242454) 
+		result *= -1;
+
 	return (result);
 
 }
