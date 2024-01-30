@@ -21,8 +21,15 @@ int _atoi(char *s)
 	{
 		if (found)
 		{
-			result += (s[position] - '0') * place;
-			place *= 10;
+			if (s[position] == '-')
+				result *= -1;
+			if (s[position] == '+')
+				result *= 1; /* no op */
+			else
+			{
+				result += (s[position] - '0') * place;
+				place *= 10;
+			}
 		}
 		else
 		{
