@@ -24,7 +24,7 @@ int _atoi(char *s)
 			result += (s[position] - '0') * place;
 			place *= 10;
 		}
-		else if
+		else
 		{
 			if (((s[position] >= '0') && (s[position] <= '9')) || (s[position] == '-') || (s[position] == '+'))
 			{
