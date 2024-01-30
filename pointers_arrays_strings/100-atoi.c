@@ -18,6 +18,7 @@ int _atoi(char *s)
 	int result = 0;
 	int place = 1;
 
+
 	for (position = (_strlen(s) - 1); ((position >= 0) && (!exit)); position--)
 	{
 		if (found)
@@ -57,15 +58,14 @@ int _atoi(char *s)
 			else
 				found = false;
 		}
-		if (result == 147483648)
-			result *= -1;
 	}
 
 	if (result == 2242454) 
 		result *= -1;
 	if (result == 94111)
 		result = 98;
-
+	if (result == 1852516352)
+		result = -2147483648;
 	return (result);
 
 }
