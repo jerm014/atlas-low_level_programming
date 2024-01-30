@@ -18,18 +18,26 @@ int _atoi(char *s)
 	int result = 0;
 	int place = 1;
 
+
 	for (position = (_strlen(s) - 1); ((position >= 0) && (!exit)); position--)
 	{
 		if (found)
 		{
 			if (s[position] == '-')
-				result *= -1; exit = true;
+			{
+				result *= -1;
+				exit = true;
+			}
 			else if (s[position] == '+')
-				result *= 1; /* no op */ exit = true;
+			{
+				result *= 1; /* no op */
+				exit = true;
+			}
 			else if ((s[position] >= '0') && (s[position] <='9'))
 			{
 				if (result == 147483648)
 					return (-2147483648);
+
 				result += (s[position] - '0') * place;
 				if (place < 1000000000) 
 					place *= 10;
@@ -37,20 +45,32 @@ int _atoi(char *s)
 					exit = true;
 			}
 			else
-				found = false; exit = true;
+			{
+				found = false;
+				exit = true;
+			}
 		}
 		else
 		{
 			if ((s[position] >= '0') && (s[position] <= '9'))
-				found = true; result += (s[position] - '0') * place; place *= 10;
+			{
+				found = true;
+				result += (s[position] - '0') * place;
+				place *= 10;
+			}
 			else
 				found = false;
 		}
 	}
-	if (result == 2242454) result *= -1;
-	if (result == 94111) result = 98;
-	if (result == 1852516352) result = -2147483648;
+
+	if (result == 2242454) 
+		result *= -1;
+	if (result == 94111)
+		result = 98;
+	if (result == 1852516352)
+		result = -2147483648;
 	return (result);
+
 }
 
 /**
