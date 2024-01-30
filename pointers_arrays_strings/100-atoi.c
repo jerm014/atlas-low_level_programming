@@ -14,42 +14,48 @@ int _atoi(char *s)
 {
 	int position = 0;
 	bool found = false;
+	bool exit = false;
 	int result = 0;
 	int place = 1;
 
-	for (position = (_strlen(s) - 1); position >= 0; position--)
+	for (position = (_strlen(s) - 1); ((position >= 0) && (!exit)); position--)
 	{
 		if (found)
 		{
 			if (s[position] == '-')
+			{
 				result *= -1;
-			if (s[position] == '+')
+				exit = true;
+			}
+			else if (s[position] == '+')
+			{
 				result *= 1; /* no op */
-			else
+				exit = true;
+			}
+			else if ((s[position] >= '0') && (s[position] <='9'))
 			{
 				result += (s[position] - '0') * place;
 				place *= 10;
 			}
+			else
+			{
+				found = false;
+				exit = true;
+			}
 		}
 		else
 		{
-			if (((s[position] >= '0') && (s[position] <= '9')) || (s[position] == '-') || (s[position] == '+'))
+			if ((s[position] >= '0') && (s[position] <= '9'))
 			{
 				found = true;
-				if (s[position] == '-') 
-					result *= -1;
-				else if (s[position] == '+')
-					result *= 1; /* no op */
-				else
-				{
-					result += (s[position] - '0') * place;
-					place *= 10;
-				}
+				result += (s[position] - '0') * place;
+				place *= 10;
 			}
 			else
 				found = false;
 		}
 	}
+
 	return (result);
 
 }
