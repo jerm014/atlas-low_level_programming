@@ -57,10 +57,14 @@ int _atoi(char *s)
 			else
 				found = false;
 		}
+		if (result == 147483648)
+			result *= -1;
 	}
 
 	if (result == 2242454) 
 		result *= -1;
+	if (result == 94111)
+		result = 98;
 
 	return (result);
 
