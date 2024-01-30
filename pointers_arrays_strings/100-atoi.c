@@ -17,7 +17,7 @@ int _atoi(char *s)
 	int result = 0;
 	int place = 1;
 
-	for (position = _strlen(s); position >= 0; position++)
+	for (position = (_strlen(s) - 1); position >= 0; position--)
 	{
 		if (found)
 		{
