@@ -13,7 +13,6 @@
 int _atoi(char *s)
 {
 	int position = 0;
-	bool exit = false;
 	bool found = false;
 	int result = 0;
 	int place = 1;
@@ -22,10 +21,29 @@ int _atoi(char *s)
 	{
 		if (found)
 		{
-			result = 
-	
+			result += (s[position] - '0') * place;
+			place *= 10;
+		}
+		else if
+		{
+			if (((s[position] >= '0') && (s[position] <= '9')) || (s[position] == '-') || (s[position] == '+'))
+			{
+				found = true;
+				if (s[position] == '-') 
+					result *= -1;
+				else if (s[position] == '+')
+					result *= 1; /* no op */
+				else
+				{
+					result += (s[position] - '0') * place;
+					place *= 10;
+				}
+			}
+			else
+		}		found = false;
 
-	}	
+	}
+	return (result);
 
 }
 
