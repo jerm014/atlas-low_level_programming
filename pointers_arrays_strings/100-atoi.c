@@ -40,8 +40,8 @@ int _atoi(char *s)
 				}
 			}
 			else
-		}		found = false;
-
+				found = false;
+		}
 	}
 	return (result);
 
