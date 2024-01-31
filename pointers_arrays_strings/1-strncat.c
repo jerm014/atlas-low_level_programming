@@ -24,7 +24,7 @@ char *_strcat(char *dest, char *src)
 		d--;
 	}
 
-	while (*src and (nn <= n))
+	while (*src && (nn <= n))
 	{
 		*dest = *src;
 		src++;
