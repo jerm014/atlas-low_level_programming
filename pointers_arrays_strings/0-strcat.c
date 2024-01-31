@@ -19,19 +19,19 @@ char *_strcat(char *dest, char *src)
 	while (*dest)
 	{
 		dest++;
-		d++;
+		d--;
 	}
 
 	while (*src)
 	{
-		dest = src;
+		*dest = *src;
 		src++;
 		dest++;
-		d++;
-		s++;
+		d--;
+		s--;
 	}
 
-	dest += d;
+	dest += d; /* put things back where we found them.*/
 	src += s;
 	return (dest);
 
