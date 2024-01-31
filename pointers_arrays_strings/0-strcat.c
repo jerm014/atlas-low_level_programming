@@ -13,12 +13,13 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i = 0; /* keep track of how far into dest we move */
+	int d = 0; /* keep track of how far into dest we move */
+	int s = 0; /* keep track of how far into src we move */
 
 	while (*dest)
 	{
 		dest++;
-		i++;
+		d++;
 	}
 
 	while (*src)
@@ -26,10 +27,12 @@ char *_strcat(char *dest, char *src)
 		dest = src;
 		src++;
 		dest++;
-		i++;
+		d++;
+		s++;
 	}
 
-	dest += i;
+	dest += d;
+	src += s;
 	return (dest);
 
 }
