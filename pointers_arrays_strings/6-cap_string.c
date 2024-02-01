@@ -5,7 +5,7 @@
  *
  * @str:       string to capatilize all words of
  *
- * Returns:    pointer to the string
+ * Return:    pointer to the string
  *
  */
 
