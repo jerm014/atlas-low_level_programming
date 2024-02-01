@@ -37,6 +37,10 @@ char *cap_string(char *str)
 					*str -= ('a' - 'A');
 			}
 		}
+
+		if (i == 0 && *str >= 'a' && *str <= 'z')
+			*str -= ('a' - 'A');
+		
 		str++;
 		i--;
 	}
