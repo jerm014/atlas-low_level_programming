@@ -16,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int d = 0; /* keep track of how far into dest we move */
 
-	while (*src && (n > 0 ))
+	while (*src && (n > 0))
 	{
 		*dest = *src;
 		src++;
@@ -25,7 +25,7 @@ char *_strncpy(char *dest, char *src, int n)
 		n--;
 	}
 
-	for ( ;n > 0; n--)
+	for (; n > 0; n--)
 	{
 		*dest = '\0';
 		dest++;
