@@ -26,7 +26,11 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 
 	for ( ;n > 0; n--)
+	{
 		*dest = '\0';
+		dest++;
+		d--;
+	}
 
 	dest += d; /* put things back where we found them.*/
 
