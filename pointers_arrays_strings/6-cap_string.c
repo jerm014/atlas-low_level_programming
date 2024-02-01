@@ -19,7 +19,7 @@ char *cap_string(char *str)
 		{
 			if (
 				(*(str - 1) == ' ') ||  /* space         */
-				(*(str - 1) == '\t') || /* tab           */ 
+				(*(str - 1) == '\t') || /* tab           */
 				(*(str - 1) == '\n') || /* newline       */
 				(*(str - 1) == ',') ||  /* comma         */
 				(*(str - 1) == ';') ||  /* semicolon     */
@@ -40,7 +40,7 @@ char *cap_string(char *str)
 
 		if (i == 0 && *str >= 'a' && *str <= 'z')
 			*str -= ('a' - 'A');
-		
+	
 		str++;
 		i--;
 	}
