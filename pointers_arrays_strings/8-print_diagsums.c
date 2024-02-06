@@ -23,8 +23,8 @@ void print_diagsums(int *a, int size)
 		if ((position % (size + 1)) == 0)
 			leftSum += a[position];
 
-		if (((position % (size - 1)) == 0) && 
-				(position > 0) && 
+		if (((position % (size - 1)) == 0) &&
+				(position > 0) &&
 				(position < (sizesize - (size - 1))))
 			rightSum += a[position];
 
