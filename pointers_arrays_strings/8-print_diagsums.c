@@ -25,7 +25,7 @@ void print_diagsums(int *a, int size)
 
 		if (((position % (size - 1)) == 0) && 
 				(position > 0) && 
-				(position < sizesize))
+				(position < (sizesize - size)))
 			rightSum += a[position];
 
 	}
