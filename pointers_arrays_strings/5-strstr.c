@@ -23,6 +23,7 @@ char *_strstr(char *s, char *find)
 		do {
 			do {
 				int ifb = (sc = *s++);
+
 				if ((ifb) == 0)
 					return (NULL);
 			} while (sc != c);
