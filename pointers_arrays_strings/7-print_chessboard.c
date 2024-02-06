@@ -13,12 +13,10 @@ void print_chessboard(char (*a)[8])
 {
 	int row, col;
 
-	for (row = 0; row <= 8; row++)
+	for (row = 0; row < 8; row++)
 	{
-		for (col = 0; col <= 8; col++)
+		for (col = 0; col < 8; col++)
 		{
-			if (a[row][col]=='\0')
-				break;
 			_putchar(a[row][col]);
 		}
 		_putchar('\n');
