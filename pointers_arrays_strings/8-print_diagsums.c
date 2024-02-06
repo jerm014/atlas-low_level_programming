@@ -13,6 +13,7 @@
 
 void print_diagsums(int *a, int size)
 {
+	int sizesize = size * size;
 	int leftSum = 0;
 	int rightSum = 0;
 	int position;
@@ -22,7 +23,9 @@ void print_diagsums(int *a, int size)
 		if ((position % (size + 1)) == 0)
 			leftSum += a[position];
 
-		if (((position % (size - 1)) == 0) && (position > 0) && (position < ((size * size) - (size - 1))))
+		if (((position % (size - 1)) == 0) && 
+				(position > 0) && 
+				(position < sizesize))
 			rightSum += a[position];
 
 	}
