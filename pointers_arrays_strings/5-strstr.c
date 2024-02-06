@@ -15,12 +15,17 @@ char *_strstr(char *s, char *find)
 {
 	register char c, sc;
 	int len;
+	int ifa = (c = *find++);
 
-	if ((c = *find++) != 0) {
+	if ((ifa) != 0) 
+	{
 		len = _strlen(find);
-		do {
-			do {
-				if ((sc = *s++) == 0)
+		do
+		{
+			do 
+			{
+				int ifb = (sc = *s++);
+				if ((ifb) == 0)
 					return (NULL);
 			} while (sc != c);
 		} while (_strncmp(s, find, len) != 0);
