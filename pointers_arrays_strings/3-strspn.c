@@ -5,7 +5,7 @@
  *
  * @s1 : string to search
  * @s2 : accept
- * 
+ *
  * Return: how many bytes match
  *
  */
