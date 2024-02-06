@@ -17,13 +17,11 @@ char *_strstr(char *s, char *find)
 	int len;
 	int ifa = (c = *find++);
 
-	if ((ifa) != 0) 
+	if ((ifa) != 0)
 	{
 		len = _strlen(find);
-		do
-		{
-			do 
-			{
+		do {
+			do {
 				int ifb = (sc = *s++);
 				if ((ifb) == 0)
 					return (NULL);
@@ -75,7 +73,7 @@ int _strncmp(char *s1, char *s2, int n)
 		if (u1 != u2)
 			return (u1 - u2);
 		if (u1 == '\0')
-			return 0;
+			return (0);
 	}
-	return 0;
+	return (0);
 }
