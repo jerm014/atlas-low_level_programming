@@ -31,13 +31,13 @@ int _sqrt(int a, int b)
 	if ((a == b) || (a < 0)) /* no find */
 		return (-1);
 
-	if (( a == 0) || (a == 1)) /* deal with 0 and 1 */
+	if ((a == 0) || (a == 1)) /* deal with 0 and 1 */
 		return (a);
 
 	if ((b * b) == a) /* found it! */
 		return (b);
 
 	/* else */
-	
+
 	return (_sqrt(a, (b + 1)));
 }
