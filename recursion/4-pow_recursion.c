@@ -6,7 +6,7 @@
  * @x:             base number
  * @y:             exponent
  *
- * Return:         x to the power of y 
+ * Return:         x to the power of y:
  *
  */
 
