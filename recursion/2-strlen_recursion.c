@@ -5,7 +5,7 @@
  *
  * @s:                the string to measure
  *
- * Returns:           length of the string
+ * Return:           length of the string
  *
  */
 
