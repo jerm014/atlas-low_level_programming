@@ -1,6 +1,7 @@
 #Project 2160
 
-###Resources
+
+#Resources
 
 **Read or watch:**
 
@@ -9,10 +10,12 @@
 [What does argc and argv mean?](https://intranet.atlasschool.com/rltoken/RT0y1HPM-AChT_JQedpdaA)
 [how to compile with unused variables](https://intranet.atlasschool.com/rltoken/GvQNF9qKoUuY1t0U1AsetA)
 
-###Learning Objectives
+
+#Learning Objectives
 
 At the end of this project, you are expected to be able to [explain to anyone,](https://intranet.atlasschool.com/rltoken/mixi0RLDGmKIaS1nqcn0xg)
 **without the help of Google:**
+
 
 ##General
 
@@ -22,7 +25,9 @@ At the end of this project, you are expected to be able to [explain to anyone,](
 * How to use __attribute__((unused)) or (void) to compile functions with unused
   variables or parameters
 
-###Requirements
+
+#Requirements
+
 
 ##General
 
