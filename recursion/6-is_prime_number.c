@@ -13,10 +13,15 @@ int check_prime(int, int, int);
 
 int is_prime_number(int n)
 {
-	int i = (n / 2);
+	int i = (n /2);
 
-	return(check_prime(n, i, i) > 0);
+	if (n == 1)
+		return (0);
+	else
+		return(check_prime(n, i, i) > 0);
+
 }
+
 
 /**
  * check_prime- see if a number is prime
