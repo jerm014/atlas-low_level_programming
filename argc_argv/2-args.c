@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main-   main entry point; display the numner of arguments
+ * main-   main entry point; display the arguments, one per line
  *
  * @argc:  length of argv
  * @argv:  arguments passed to executable
@@ -12,7 +12,12 @@
 
 int main(int argc, char *argv[])
 {
-	argv = argv;
-	printf("%d\n", --argc);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
+
 	return (0);
 }
