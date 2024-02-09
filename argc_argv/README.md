@@ -5,10 +5,10 @@
 
 **Read or watch:**
 
-[Arguments to main](https://intranet.atlasschool.com/rltoken/ro9HSskzyAhNpzdcVhdVWw)
-[argc and argv](https://intranet.atlasschool.com/rltoken/zjdRHZTL-ImDCnGuMfHYfA)
-[What does argc and argv mean?](https://intranet.atlasschool.com/rltoken/RT0y1HPM-AChT_JQedpdaA)
-[how to compile with unused variables](https://intranet.atlasschool.com/rltoken/GvQNF9qKoUuY1t0U1AsetA)
+* [Arguments to main](https://intranet.atlasschool.com/rltoken/ro9HSskzyAhNpzdcVhdVWw)
+* [argc and argv](https://intranet.atlasschool.com/rltoken/zjdRHZTL-ImDCnGuMfHYfA)
+* [What does argc and argv mean?](https://intranet.atlasschool.com/rltoken/RT0y1HPM-AChT_JQedpdaA)
+* [how to compile with unused variables](https://intranet.atlasschool.com/rltoken/GvQNF9qKoUuY1t0U1AsetA)
 
 
 # Learning Objectives
