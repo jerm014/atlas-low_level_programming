@@ -35,16 +35,16 @@ int is_prime_number(int n)
 
 int check_prime(int n, int test)
 {
-	if (((n % test) == 0) || (test > (n / 2)))
+	if ((n % test) == 0)
 	{
 		return (0);
 	}
 
-	if (test > (n - 1))
+	if ((test > (n - 1)) || (test > (n / 2)))
         {
 		return(1);
 	}
-	printf("testing %d\n", test);
+	/* printf("testing %d\n", test); */
 	return check_prime(n, ++test);
 
 }
