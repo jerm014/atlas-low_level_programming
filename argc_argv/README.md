@@ -5,15 +5,15 @@
 
 **Read or watch:**
 
-* [Arguments to main](https://intranet.atlasschool.com/rltoken/ro9HSskzyAhNpzdcVhdVWw)
-* [argc and argv](https://intranet.atlasschool.com/rltoken/zjdRHZTL-ImDCnGuMfHYfA)
-* [What does argc and argv mean?](https://intranet.atlasschool.com/rltoken/RT0y1HPM-AChT_JQedpdaA)
-* [how to compile with unused variables](https://intranet.atlasschool.com/rltoken/GvQNF9qKoUuY1t0U1AsetA)
+* [Arguments to main](https://publications.gbdirect.co.uk//c_book/chapter10/arguments_to_main.html)
+* [argc and argv](http://crasseux.com/books/ctutorial/argc-and-argv.html)
+* [What does argc and argv mean?](https://www.youtube.com/watch?v=aP1ijjeZc24)
+* [how to compile with unused variables](https://www.google.com/webhp?q=unused+variable+C)
 
 
 # Learning Objectives
 
-At the end of this project, you are expected to be able to [explain to anyone,](https://intranet.atlasschool.com/rltoken/mixi0RLDGmKIaS1nqcn0xg)
+At the end of this project, you are expected to be able to [explain to anyone,](https://fs.blog/feynman-learning-technique/)
 **without the help of Google:**
 
 
