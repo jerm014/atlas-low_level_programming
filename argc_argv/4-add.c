@@ -4,7 +4,7 @@
 int isNumeric(char *);
 
 /**
- * main-   main entry point; add numbers up; display sum
+ * main-   main entry point, add numbers up, display sum
  *
  * @argc:  length of argv
  * @argv:  arguments passed to executable
@@ -15,7 +15,6 @@ int isNumeric(char *);
 
 int main(int argc, char *argv[])
 {
-
 	int i;
 	int res = 0;
 
