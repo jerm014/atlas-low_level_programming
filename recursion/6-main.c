@@ -10,7 +10,7 @@ int main(void)
 {
     int r;
 
-    r = is_prime_number(1);
+    r = is_prime_number(103);
     printf("%d\n", r);
     r = is_prime_number(1024);
     printf("%d\n", r);
