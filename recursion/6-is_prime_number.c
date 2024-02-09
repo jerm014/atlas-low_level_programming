@@ -35,7 +35,7 @@ int is_prime_number(int n)
 
 int check_prime(int n, int test)
 {
-	if ((n % test) == 0)
+	if (((n % test) == 0) || (test > (n / 2)))
 	{
 		return (0);
 	}
