@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
 int isNumeric(char *str)
 {
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		if((*str < '0' || *str > '9') && (*str != '-') && (*str != '+'))
 			return (0);
