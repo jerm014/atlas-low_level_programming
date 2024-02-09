@@ -1,6 +1,6 @@
 #include "main.h"
 
-int check_prime(int, unsigned int, unsigned int);
+int check_prime(unsigned int, unsigned int, unsigned int);
 
 /**
  * is_prime_number- is a number a prime number or is it not a prime number
@@ -18,7 +18,7 @@ int is_prime_number(int n)
 	if (n <= 1)
 		return (0);
 	else
-		return(check_prime(n, i, i) > 0);
+		return(check_prime((unsigned int)n, i, i) > 0);
 
 }
 
@@ -34,7 +34,7 @@ int is_prime_number(int n)
  *
  */
 
-int check_prime(int n, unsigned int a, unsigned int b)
+int check_prime(unsigned int n, unsigned int a, unsigned int b)
 {
 	if ((a == 0) && (b == 0))
 		return (1);
