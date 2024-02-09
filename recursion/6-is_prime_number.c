@@ -13,8 +13,8 @@ int check_prime(unsigned int, unsigned int, unsigned int);
 
 int is_prime_number(int n)
 {
-	int i = (n /2);
-	int ii = (i / 2);
+	int i = (n / 3);
+	int ii = (n / 4);
 
 	if (n <= 1)
 		return (0);
@@ -46,7 +46,7 @@ int check_prime(unsigned int n, unsigned int a, unsigned int b)
 	if (b == 0)
 	{
 		a--;
-		b = (n / 2);
+		b = (n / 4);
 	}
 
 	return check_prime(n, a, --b);
