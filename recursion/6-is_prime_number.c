@@ -14,11 +14,12 @@ int check_prime(unsigned int, unsigned int, unsigned int);
 int is_prime_number(int n)
 {
 	int i = (n /2);
+	int ii = (i / 2);
 
 	if (n <= 1)
 		return (0);
 	else
-		return(check_prime((unsigned int)n, i, i) > 0);
+		return(check_prime((unsigned int)n, i, ii) > 0);
 
 }
 
