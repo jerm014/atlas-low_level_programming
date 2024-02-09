@@ -43,6 +43,6 @@ int check_prime(int n, int a, int b)
 		b = (n / 2);
 	}
 
-	return (n, a, --b);
+	return check_prime(n, a, --b);
 
 }
