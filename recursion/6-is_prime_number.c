@@ -25,9 +25,8 @@ int is_prime_number(int n)
 /**
  * check_prime- see if a number is prime
  *
- * @n: number to check
- * @a: a iterator
- * @b: b iterator
+ * @n:          number to check
+ * @test:       iterator
  *
  * Return:      0 - no;  1 - yes
  *
