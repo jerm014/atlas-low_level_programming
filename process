@@ -1,0 +1,22 @@
+#!/bin/bash
+
+./2159 0-isupper.c
+./2159 0-memset.c
+./2159 0-strcat.c
+./2159 1-isdigit.c
+./2159 1-memcpy.c
+./2159 1-strncat.c
+./2159 100-atoi.c
+./2159 2-strchr.c
+./2159 2-strlen.c
+./2159 2-strncpy.c
+./2159 3-islower.c
+./2159 3-puts.c
+./2159 3-strcmp.c
+./2159 3-strspn.c
+./2159 4-isalpha.c
+./2159 4-strpbrk.c
+./2159 5-strstr.c
+./2159 6-abs.c
+./2159 9-strcpy.c
+./2159 _putchar.c

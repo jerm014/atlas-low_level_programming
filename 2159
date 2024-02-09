@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "copying $(find -name $1) to static_libraries"
+cp -f $(find -name $1) static_libraries
