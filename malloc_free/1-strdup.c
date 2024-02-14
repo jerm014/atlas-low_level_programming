@@ -16,19 +16,20 @@ int _strlen(char *s);
 
 char *_strdup(char *str)
 {
-	unsigned int i = 0;
-	unsigned int len = _strlen(str);
+	unsigned int i;
+	unsigned int len;
 	char *res;
 
 	if (str == NULL)
 		return (NULL);
 			
+	len = _strlen(str);
 	res = malloc(sizeof(char) * len);
 
 	if (res == NULL)
 		return (NULL);
 
-	for (; i < len; i++)
+	for (i = 0; i < len; i++)
 		res[i] = str[i];
 
 	return (res);
