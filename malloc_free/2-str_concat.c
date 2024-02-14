@@ -8,7 +8,7 @@
  * @s1:         the first string
  * @s2:         the second string
  *
- * Return:      a pointer to a newly allocated null terminated string that 
+ * Return:      a pointer to a newly allocated null terminated string that
  *              contains both strings
  *
  */
