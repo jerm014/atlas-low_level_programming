@@ -20,9 +20,12 @@ char *_strdup(char *str)
 	unsigned int len = _strlen(str);
 	char *res;
 
+	if (str == NULL)
+		return (NULL);
+			
 	res = malloc(sizeof(char) * len);
 
-	if (res == NULL || str == NULL)
+	if (res == NULL)
 		return (NULL);
 
 	for (; i < len; i++)
