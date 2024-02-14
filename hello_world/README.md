@@ -2,16 +2,16 @@
 
 **Read or watch:**
 
-[Everything you need to know to start with C.pdf](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2021/1/d801279f75de6a982a55d752dfd3632909f720f0.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240214%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240214T170146Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c389373725028126a3db2de75c048aff683b62574c124dbbc694b9fc062091c7) (_You do not have to learn everything in there yet, but make sure you read it entirely first_)
-[Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
-["C" Programming Language: Brian Kernighan](https://www.youtube.com/watch?v=de2Hsvxaf8M)
-[Why C Programming Is Awesome](https://www.youtube.com/watch?v=smGalmxPVYc)
-[Learning to program in C part 1](https://www.youtube.com/watch?v=rk2fK2IIiiQ)
-[Learning to program in C part 2](https://www.youtube.com/watch?v=FwpP_MsZWnU)
-[Understanding C program Compilation Process](https://www.youtube.com/watch?v=VDslRumKvRA)
-[Betty Coding Style](https://github.com/hs-hq/Betty/wiki)
-[Hash-bang under the hood](https://twitter.com/unix_byte/status/1024147947393495040?s=21) (_Look at only after you finish consuming the other resources_)
-[Linus Torvalds on C vs. C++](https://harmful.cat-v.org/software/c++/linus) (_Look at only after you finish consuming the other resources_)
+* [Everything you need to know to start with C.pdf](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2021/1/d801279f75de6a982a55d752dfd3632909f720f0.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240214%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240214T170146Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c389373725028126a3db2de75c048aff683b62574c124dbbc694b9fc062091c7) (_You do not have to learn everything in there yet, but make sure you read it entirely first_)
+* [Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
+* ["C" Programming Language: Brian Kernighan](https://www.youtube.com/watch?v=de2Hsvxaf8M)
+* [Why C Programming Is Awesome](https://www.youtube.com/watch?v=smGalmxPVYc)
+* [Learning to program in C part 1](https://www.youtube.com/watch?v=rk2fK2IIiiQ)
+* [Learning to program in C part 2](https://www.youtube.com/watch?v=FwpP_MsZWnU)
+* [Understanding C program Compilation Process](https://www.youtube.com/watch?v=VDslRumKvRA)
+* [Betty Coding Style](https://github.com/hs-hq/Betty/wiki)
+* [Hash-bang under the hood](https://twitter.com/unix_byte/status/1024147947393495040?s=21) (_Look at only after you finish consuming the other resources_)
+* [Linus Torvalds on C vs. C++](https://harmful.cat-v.org/software/c++/linus) (_Look at only after you finish consuming the other resources_)
 
 **man or help:**
 
