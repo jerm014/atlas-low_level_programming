@@ -1,7 +1,4 @@
-# Project 2160
-
-
-# Resources
+# Resources: C - argc, argv
 
 **Read or watch:**
 

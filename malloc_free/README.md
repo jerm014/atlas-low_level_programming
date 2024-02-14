@@ -1,13 +1,12 @@
 # Resources: C - malloc, free
 
 
-## Read or watch:
+**Read or watch:**
 
 * [0x0a - malloc & free - quick overview.pdf](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2021/1/a094c90e7f466bbeaa49cb24c8f04e7f27aaad41.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240214%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240214T161155Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=54cc4d14228318f263c14ba338f7962f73b5181e85e1addb6c8613c0634652d7)
 * [Dynamic memory allocation in C - malloc calloc realloc free](https://www.youtube.com/watch?v=xDVC3wKjS64) (stop at 6:50)
 
-
-## man or help:
+**man or help:**
 
 * malloc
 * free
@@ -15,7 +14,7 @@
 
 # Learning Objectives
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+At the end of this project, you are expected to be able to explain to anyone, **without the help of Google:**
 
 
 # General
