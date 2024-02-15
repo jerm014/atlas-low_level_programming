@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 		len += (_strlen(av[i]) + 1);
 
 	res = malloc (len + 1);
@@ -38,7 +38,7 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < len+1 ; i++)
 		res[i] = '\0';
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		res = _strcat(res, av[i]);
 		res = _strcat(res, pn);
