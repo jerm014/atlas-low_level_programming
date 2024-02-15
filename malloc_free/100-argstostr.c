@@ -14,7 +14,7 @@
  * @ac:       the number of arguments
  * @av:       a pointer to an array of arguments
  *
- * Returns:   0 for success of NULL if error
+ * Return:    0 for success of NULL if error
  *
  */
 
