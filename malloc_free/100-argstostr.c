@@ -3,7 +3,8 @@
 #include "main.h"
 
 /**
- * argstostr- Write a function that concatenates all the arguments of your program.
+ * argstostr- Write a function that concatenates all the arguments of your
+ *            program.
  *
  *            Prototype: char *argstostr(int ac, char **av);
  *            Returns NULL if ac == 0 or av == NULL
@@ -22,6 +23,7 @@ char *argstostr(int ac, char **av)
 	char *res;
 	int i, len = 0;
 	char *pn;
+
 	pn = "\n";
 
 	if (ac == 0 || av == NULL)
@@ -30,12 +32,12 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 		len += (_strlen(av[i]) + 1);
 
-	res = malloc (len + 1);
-	
+	res = malloc(len + 1);
+
 	if (res == NULL)
 		return (NULL);
 
-	for (i = 0; i < len+1 ; i++)
+	for (i = 0; i < len + 1 ; i++)
 		res[i] = '\0';
 
 	for (i = 0; i < ac; i++)
