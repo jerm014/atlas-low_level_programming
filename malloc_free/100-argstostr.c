@@ -21,7 +21,8 @@ char *argstostr(int ac, char **av)
 {
 	char *res;
 	int i, len = 0;
-	char n = '\n';
+	char *pn;
+	pn = "\n";
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -40,7 +41,7 @@ char *argstostr(int ac, char **av)
 	for (i = 1; i < ac; i++)
 	{
 		res = _strcat(res, av[i]);
-		res = _strcat(res, &n);
+		res = _strcat(res, pn);
 	}
 
 	return (res);
