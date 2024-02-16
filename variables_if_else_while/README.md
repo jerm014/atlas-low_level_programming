@@ -2,12 +2,12 @@
 
 **Read or watch:**
 
-* [Everything you need to know to start with C.pdf](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2023/10/6cc7d824b12e60d8a83955cd03bcf333b248a66b.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240216%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240216T002639Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ef7d6b73f4022f32ad234cb26faeb6db39ba6dff42bc9091f90b5fc9c93e9077) (You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: _"comments", "Data types | Integer types", "Declaration", "Characters", "Arithmetic operators", "Variables assignments", "Comparisons", "Logical operators", "if, if...¦els", "while loops"_)
+* [Everything you need to know to start with C.pdf](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2023/10/6cc7d824b12e60d8a83955cd03bcf333b248a66b.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240216%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240216T002639Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ef7d6b73f4022f32ad234cb26faeb6db39ba6dff42bc9091f90b5fc9c93e9077) (You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: _"comments", "Data types | Integer types", "Declaration", "Characters", "Arithmetic operators", "Variables assignments", "Comparisons", "Logical operators", "if, if...else, "while loops"_)
 * [Keywords and identifiers](https://publications.gbdirect.co.uk//c_book/chapter2/keywords_and_identifiers.html)
 * [integers](https://publications.gbdirect.co.uk//c_book/chapter2/integral_types.html)
 * [Arithmetic Operators in C](https://www.tutorialspoint.com/cprogramming/c_arithmetic_operators.htm)
 * [If statements in C](https://www.cprogramming.com/tutorial/c/lesson2.html)
-* [if ¦else staemen](https://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm)
+* [If...else statement](https://www.tutorialspoint.com/cprogramming/if_else_statement_in_c.htm)
 * [Relational operators](https://www.tutorialspoint.com/cprogramming/c_relational_operators.htm)
 * [Logical operators](https://www.fresh2refresh.com/c-programming/c-operators-expressions/c-logical-operators/)
 * [while loop in C](https://www.tutorialspoint.com/cprogramming/c_while_loop.htm)
