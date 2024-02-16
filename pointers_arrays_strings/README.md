@@ -1,6 +1,8 @@
-# Resources: C - Pointers, arrays and strings (2155)
+# C - Pointers, arrays and strings (2155)
 
 ![C isn't that hard](https://external-preview.redd.it/P5hk_YN9x9pgxIdGMkG8V0HYUPRKAIvC4uCM6-qHSH4.jpg?width=640&crop=smart&auto=webp&s=6625feb8125fa653cfbfe61b3e3f38ff8de7ae1f)
+
+# Resources
 
 **Read or watch:**
 
@@ -49,10 +51,12 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 You do not need to learn about pointers to functions, pointers to pointers, multidimensional arrays, arrays of structures, malloc and free - yet.
 
 
-# Requirements: C - More pointers, arrays and strings (2156)
+# C - More pointers, arrays and strings (2156)
 
 ![More pointers!](https://media1.tenor.com/m/QE2m-iiLymkAAAAC/phoebe-excited.gif)
 
+
+# Requirements
 
 ## General
 
@@ -70,6 +74,8 @@ You do not need to learn about pointers to functions, pointers to pointers, mult
 * The prototypes of all your functions and the prototype of the function \_putchar should be included in your header file called main.h
 * Don't forget to push your header file
 
+
+# C - Even more pointers, arrays and strings (2157)
 
 ![Yo Dawg I Heard You Like Pointers](http://www.quickmeme.com/img/58/58fe6b229144b7fe5ebe88afe9ff5cabe2dd0863e1e79b2d02b4103c30b465dd.jpg)
 
