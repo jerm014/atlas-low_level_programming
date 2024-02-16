@@ -43,5 +43,6 @@
 	void free_grid(int **grid, int height);
 	char *argstostr(int ac, char **av);
 	char **strtow(char *str);
+	void *malloc_checked(unsigned int b);
 
 	#endif
