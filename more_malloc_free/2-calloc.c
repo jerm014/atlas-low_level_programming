@@ -25,6 +25,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *res;
+	int i;
 
 	if (nmemb * size == 0)
 		return (NULL);
@@ -32,6 +33,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	res = malloc(nmemb * size);
 	if (res == NULL)
 		return (NULL);
+
+	for (i = 0; i < nmemb * size; i++)
+		res[i] = 0;
 
 	return (res);
 
