@@ -32,7 +32,7 @@ voice @calloc(unsigned int nmemb, unsigned int size)
 	res = malloc(nmemb * size);
 	if (res == NULL)
 		return (NULL);
-	
+
 	return (res);
 
 }
