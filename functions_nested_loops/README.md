@@ -1,4 +1,7 @@
-# Resources: C - Functions, nested loops
+# C - Function, nested loops
+
+
+# Resources:
 
 
 **Read or watch:**

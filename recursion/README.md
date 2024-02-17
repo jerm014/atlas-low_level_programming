@@ -1,4 +1,9 @@
-# Resources: C - Recursion
+# C - Recursion (Project 2158)
+
+![We need to go deeper](https://i.kym-cdn.com/photos/images/newsfeed/000/531/557/a88.jpg)
+
+
+# Resources:
 
 **Read or watch:**
 
