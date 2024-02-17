@@ -75,5 +75,8 @@ int _strlen(char *s)
 
 int _fmin(int a, int b)
 {
-	(((a) < (b)) ? (a) : (b))
+	if (a < b)
+		return (a);
+
+	return (b);
 }
