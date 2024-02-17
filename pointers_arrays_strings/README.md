@@ -51,7 +51,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 You do not need to learn about pointers to functions, pointers to pointers, multidimensional arrays, arrays of structures, malloc and free - yet.
 
 
-# C - More pointers, arrays and strings (2156)
+# C - More pointers, arrays and strings (Project 2156)
 
 ![More pointers!](https://media1.tenor.com/m/QE2m-iiLymkAAAAC/phoebe-excited.gif)
 
@@ -75,7 +75,7 @@ You do not need to learn about pointers to functions, pointers to pointers, mult
 * Don't forget to push your header file
 
 
-# C - Even more pointers, arrays and strings (2157)
+# C - Even more pointers, arrays and strings (Project 2157)
 
 ![Yo Dawg I Heard You Like Pointers](http://www.quickmeme.com/img/58/58fe6b229144b7fe5ebe88afe9ff5cabe2dd0863e1e79b2d02b4103c30b465dd.jpg)
 
