@@ -1,5 +1,13 @@
 # C - Static libraries (Project 2159)
 
+
+### Concepts
+
+For this project, we expect you to look at this concept:
+
+[C static libraries](we_expect_you_to_read_this.md)
+
+
 # Resources: C - Static libraries
 
 **Read or watch:**
