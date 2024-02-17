@@ -27,15 +27,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *res;
 	int len1, len2, i;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	
 	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	len2 = min(n, _strlen(s2));
 
-	res = malloc(len1 + _fmin(n, len2) + 1  * sizeof(char));
+	res = malloc(len1 + len2 + 1  * sizeof(char));
 
 	for (i = 0; i < len1; i++)
 		res[i] = s1[i];
 
-	for (i = 0; i < _fmin(n, len2); i++)
+	for (i = 0; i < len2; i++)
 		res[(len1 + i)] = s2[i];
 
 	res[len1 + i] = '\0';
