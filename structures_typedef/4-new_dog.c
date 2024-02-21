@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
 
 /**
@@ -26,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (result == NULL)
 		return (NULL);
 
-	result->name = malloc(sizeof(char) * (strlen(name) + 1));
+	result->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (result->name == NULL)
 	{
 		free(result);
@@ -34,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 
-	result->owner = malloc(sizeof(char) * (strlen(owner) + 1));
+	result->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (result->owner == NULL)
 	{
 		free(result->name);
@@ -42,9 +41,53 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	result->name = strcpy(result->name, name);
+	result->name = _strcpy(result->name, name);
 	result->age = age;
-	result->owner = strcpy(result->owner, owner);
+	result->owner = _strcpy(result->owner, owner);
 
 	return (result);
+}
+
+/**
+ * _strcpy-  copy a string
+ *
+ * @dest:    where to put the copy
+ * @src:     what to copy
+ *
+ * Return:   pointer to @dest
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int position = 0;
+	bool exit = 0;
+
+	while (!exit)
+	{
+		dest[position] = src[position];
+		if (src[position] == 0)
+			exit = true;
+		position++;
+	}
+
+	return (dest);
+}
+
+/**
+ * _strlen-  determine the length of a string
+ *
+ * @s:       the string to find the longness of
+ *
+ * Return:   the longness of the string
+ *
+ */
+
+int _strlen(char *s)
+{
+	int pos = 0;
+
+	while (s[pos] != 0)
+		pos++;
+
+	return (pos);
 }
