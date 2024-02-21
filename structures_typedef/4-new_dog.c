@@ -9,7 +9,8 @@
  *           not lab like a labrador, lab like labratory.
  *
  * @name:    the name of the doge
- * @owner:   the name of the dog mommy or daddy
+ * @age:     the age of the doge
+ * @owner:   the name of the doge mommy or daddy
  *
  * Return:   a dog
  *
