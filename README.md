@@ -13,3 +13,5 @@
 * [C - malloc, free (Project 2161)](malloc_free)
 * [C - More malloc, free (Prject 2162)](more_malloc_free)
 * [C - Preprocessor (Proect 2163)](preprocessor)
+* [C - Structures, typedef (Project 2164)](structures_typedef)
+* [C - Function pointers (Proejct 2165)](function_pointers)
