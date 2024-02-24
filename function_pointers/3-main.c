@@ -3,6 +3,7 @@
 #include "function_pointers.h"
 
 /**
+ * main- main entry point
  *
  * @argc:  count of arguments
  * @argv:  argument vector
