@@ -32,6 +32,12 @@ int main(int argc, char **argv)
 		return (99);
 	}
 
+	if (((func == &op_div) || (func == &op_mod)) && (b == 0))
+	{
+		printf("Error\n");
+		return (100);
+	}
+
 	printf("%d\n", get_op_func(argv[2])(a, b));
 
 	return (0);
