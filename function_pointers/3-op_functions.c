@@ -42,6 +42,7 @@ int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
  * op_div- return the quotient of a and b
  *
