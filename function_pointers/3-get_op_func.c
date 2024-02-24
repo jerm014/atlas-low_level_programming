@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "3-calc.h"
 #include "function_pointers.h"
 
@@ -56,7 +57,6 @@ int (*get_op_func(char *s))(int, int b)
 		i++;
 	}
 
-	printf("Error\n");
-	exit(99);
+	return (NULL);
 
 }
