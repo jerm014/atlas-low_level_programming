@@ -3,32 +3,32 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-void printf_c(va_list *p_ap)
+void printf_c(va_list p_ap)
 {
 	char c;
 
-	c = va_arg(*p_ap, int);
+	c = va_arg(p_ap, int);
 	printf("%c", c);
 }
-void printf_i(va_list *p_ap)
+void printf_i(va_list p_ap)
 {
 	int i;
 
-	i = va_arg(*p_ap, int);
+	i = va_arg(p_ap, int);
 	printf("%d", i);
 }
-void printf_f(va_list *p_ap)
+void printf_f(va_list p_ap)
 {
 	double f;
 
-	f = va_arg(*p_ap, double);
+	f = va_arg(p_ap, double);
 	printf("%f", f);
 }
-void printf_s(va_list *p_ap)
+void printf_s(va_list p_ap)
 {
 	char *s;
 
-	s = va_arg(*p_ap, char *);
+	s = va_arg(p_ap, char *);
 	printf("%s", s);
 }
 
@@ -62,7 +62,7 @@ void printf_s(va_list *p_ap)
 void print_all(const char * const format, ...)
 {
 	int a, b;
-	va_list *ap;
+	va_list ap;
 	op_t ops[] = {
 		{"c", printf_c},
 		{"i", printf_i},
@@ -71,9 +71,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL},
 	};
 
-	ap = malloc(sizeof(va_list));
-
-	va_start(*ap, format);
+	va_start(ap, format);
 
 	a = 0;
 	while (format[a])
@@ -93,6 +91,6 @@ void print_all(const char * const format, ...)
 	}
 
 	printf("\n");
-	va_end (*ap);
+	va_end (ap);
 
 }
