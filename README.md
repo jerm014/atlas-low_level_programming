@@ -15,3 +15,4 @@
 * [C - Preprocessor (Proect 2163)](preprocessor)
 * [C - Structures, typedef (Project 2164)](structures_typedef)
 * [C - Function pointers (Proejct 2165)](function_pointers)
+* [C - Variadic functions (Project 2166)](variadic_functions)
