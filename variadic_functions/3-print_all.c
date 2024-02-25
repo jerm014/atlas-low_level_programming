@@ -2,20 +2,32 @@
 #include <stdio.h>
 #include "varidic.h"
 
-void printf_c(char c)
+void printf_c(va_list *p_ap)
 {
+	char c;
+
+	c = va_arg(p_ap, char);
 	printf("%c", c);
 }
-void printf_i(int i)
+void printf_i(va_list *p_ap)
 {
+	int i;
+
+	i = va_arg(p_ap, int);
 	printf("%d", i);
 }
-void printf_f(float f)
+void printf_f(va_list *p_ap)
 {
+	float f;
+
+	f = va_arg(p_ap, float);
 	printf("%f", f);
 }
-void printf_s(char *s)
+void printf_s(va_list *p_ap)
 {
+	char *s;
+
+	s = va_arg(p_ap, char *)
 	printf("%s", );
 }
 
@@ -62,7 +74,7 @@ void print_all(const char * const format, ...)
 		while (i < 4)
 		{
 			if (f[i][0] == format[0])
-				
+				f[i][1](ap);			
 		}
 		format++;
 	}
