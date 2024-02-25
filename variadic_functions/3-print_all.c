@@ -3,6 +3,12 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
+/**
+ * printf_c- print a char
+ * @p_ap:    the va_list
+ * Return:   nothing
+ */
+
 void printf_c(va_list p_ap)
 {
 	char c;
@@ -10,6 +16,13 @@ void printf_c(va_list p_ap)
 	c = va_arg(p_ap, int);
 	printf("%c", c);
 }
+
+/**
+ * printf_i- print an int
+ * @p_ap:    the va_list
+ * Return:   nothing
+ */
+
 void printf_i(va_list p_ap)
 {
 	int i;
@@ -17,6 +30,13 @@ void printf_i(va_list p_ap)
 	i = va_arg(p_ap, int);
 	printf("%d", i);
 }
+
+/**
+ * printf_f- print a float (double)
+ * @p_ap:    the va_list
+ * Return:   nothing
+ */
+
 void printf_f(va_list p_ap)
 {
 	double f;
@@ -24,6 +44,13 @@ void printf_f(va_list p_ap)
 	f = va_arg(p_ap, double);
 	printf("%f", f);
 }
+
+/**
+ * printf_s- print a string (char *)
+ * @p_ap:    the va_list
+ * Return:   nothing
+ */
+
 void printf_s(va_list p_ap)
 {
 	char *s;
@@ -82,6 +109,11 @@ void print_all(const char * const format, ...)
 			if (*(ops[b].op) == format[a])
 			{
 				(*ops[b].f)(ap);
+				if ((format[a + 1] == 'c') ||
+					(format[a + 1] == 'i') ||
+					(format[a + 1] == 'f') ||
+					(format[a + 1] == 's'))
+					printf(", ");
 				break;
 			}
 
@@ -91,6 +123,6 @@ void print_all(const char * const format, ...)
 	}
 
 	printf("\n");
-	va_end (ap);
+	va_end(ap);
 
 }
