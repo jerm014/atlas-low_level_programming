@@ -1,34 +1,35 @@
 #include <stdarg.h>
+#include <stdlib.h>
 #include <stdio.h>
-#include "varidic.h"
+#include "variadic_functions.h"
 
 void printf_c(va_list *p_ap)
 {
 	char c;
 
-	c = va_arg(p_ap, char);
+	c = va_arg(*p_ap, int);
 	printf("%c", c);
 }
 void printf_i(va_list *p_ap)
 {
 	int i;
 
-	i = va_arg(p_ap, int);
+	i = va_arg(*p_ap, int);
 	printf("%d", i);
 }
 void printf_f(va_list *p_ap)
 {
-	float f;
+	double f;
 
-	f = va_arg(p_ap, float);
+	f = va_arg(*p_ap, double);
 	printf("%f", f);
 }
 void printf_s(va_list *p_ap)
 {
 	char *s;
 
-	s = va_arg(p_ap, char *)
-	printf("%s", );
+	s = va_arg(*p_ap, char *);
+	printf("%s", s);
 }
 
 /**
@@ -60,22 +61,38 @@ void printf_s(va_list *p_ap)
 
 void print_all(const char * const format, ...)
 {
-	int i;
-	va_list ap;
-	char f = {{"c", printf_c},{"i", printf_i},{"f", printf_f},{"s", printf_s}};
+	int a, b;
+	va_list *ap;
+	op_t ops[] = {
+		{"c", printf_c},
+		{"i", printf_i},
+		{"f", printf_f},
+		{"s", printf_s},
+		{NULL, NULL},
+	};
 
+	ap = malloc(sizeof(va_list));
 
+	va_start(*ap, format);
 
-	va_start(ap, n);
-
-	while (*format)
+	a = 0;
+	while (format[a])
 	{
-		i = 0;
-		while (i < 4)
+		b = 0;
+		while (ops[b].op)
 		{
-			if (f[i][0] == format[0])
-				f[i][1](ap);			
+			if (*(ops[b].op) == format[a])
+			{
+				(*ops[b].f)(ap);
+				break;
+			}
+
+			b++;
 		}
-		format++;
+		a++;
 	}
+
+	printf("\n");
+	va_end (*ap);
+
 }
