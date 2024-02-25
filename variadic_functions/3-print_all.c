@@ -106,21 +106,25 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 
 	a = 0;
-	while (format[a] && format != NULL)
-	{
-		b = 0;
-		while (ops[b].op)
-		{
-			if (*(ops[b].op) == format[a])
-			{
-				(*ops[b].f)(ap, comma);
-				comma = ", ";
-				break;
-			}
 
-			b++;
+	if (format != NULL)
+	{
+		while (format[a] && format != NULL)
+		{
+			b = 0;
+			while (ops[b].op)
+			{
+				if (*(ops[b].op) == format[a])
+				{
+					(*ops[b].f)(ap, comma);
+					comma = ", ";
+					break;
+				}
+	
+				b++;
+			}
+			a++;
 		}
-		a++;
 	}
 
 	printf("\n");
