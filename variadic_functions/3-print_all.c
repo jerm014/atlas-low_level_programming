@@ -6,57 +6,61 @@
 /**
  * printf_c- print a char
  * @p_ap:    the va_list
+ * @comma:   might be a comma
  * Return:   nothing
  */
 
-void printf_c(va_list p_ap)
+void printf_c(va_list p_ap, char *comma)
 {
 	char c;
 
 	c = va_arg(p_ap, int);
-	printf("%c", c);
+	printf("%s%c", comma, c);
 }
 
 /**
  * printf_i- print an int
  * @p_ap:    the va_list
+ * @comma:   might be a comma
  * Return:   nothing
  */
 
-void printf_i(va_list p_ap)
+void printf_i(va_list p_ap, char *comma)
 {
 	int i;
 
 	i = va_arg(p_ap, int);
-	printf("%d", i);
+	printf("%s%d", comma, i);
 }
 
 /**
  * printf_f- print a float (double)
  * @p_ap:    the va_list
+ * @comma:   might be a comma
  * Return:   nothing
  */
 
-void printf_f(va_list p_ap)
+void printf_f(va_list p_ap, char *comma)
 {
 	double f;
 
 	f = va_arg(p_ap, double);
-	printf("%f", f);
+	printf("%s%f", comma, f);
 }
 
 /**
  * printf_s- print a string (char *)
  * @p_ap:    the va_list
+ * @comma:   might be a comma
  * Return:   nothing
  */
 
-void printf_s(va_list p_ap)
+void printf_s(va_list p_ap, char *comma)
 {
 	char *s;
 
 	s = va_arg(p_ap, char *);
-	printf("%s", s);
+	printf("%s%s", comma, s);
 }
 
 /**
@@ -90,6 +94,7 @@ void print_all(const char * const format, ...)
 {
 	int a, b;
 	va_list ap;
+	char *comma = "";
 	op_t ops[] = {
 		{"c", printf_c},
 		{"i", printf_i},
@@ -108,12 +113,8 @@ void print_all(const char * const format, ...)
 		{
 			if (*(ops[b].op) == format[a])
 			{
-				(*ops[b].f)(ap);
-				if ((format[a + 1] == 'c') ||
-					(format[a + 1] == 'i') ||
-					(format[a + 1] == 'f') ||
-					(format[a + 1] == 's'))
-					printf(", ");
+				(*ops[b].f)(ap, comma);
+				comma = ", ";
 				break;
 			}
 
