@@ -2,6 +2,23 @@
 #include <stdio.h>
 #include "varidic.h"
 
+void printf_c(char c)
+{
+	printf("%c", c);
+}
+void printf_i(int i)
+{
+	printf("%d", i);
+}
+void printf_f(float f)
+{
+	printf("%f", f);
+}
+void printf_s(char *s)
+{
+	printf("%s", );
+}
+
 /**
  * print_all- a function that prints anything.
  *
@@ -32,7 +49,12 @@
 void print_all(const char * const format, ...)
 {
 	int i;
-	char f = {{"c", "char"},{"i", "int"},{"f", "float"},{"s", "char *"}};
+	va_list ap;
+	char f = {{"c", printf_c},{"i", printf_i},{"f", printf_f},{"s", printf_s}};
+
+
+
+	va_start(ap, n);
 
 	while (*format)
 	{
@@ -40,7 +62,7 @@ void print_all(const char * const format, ...)
 		while (i < 4)
 		{
 			if (f[i][0] == format[0])
-				// arg
+				
 		}
 		format++;
 	}
