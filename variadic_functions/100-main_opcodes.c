@@ -13,12 +13,26 @@
 int main(int argc, char *argv[])
 {
 	int i = 0;
+	int limit;
+	char *sep;
 
-	while (i < 10)
+	sep = "";
+
+	if (argc != 2)
 	{
-		printf("%d", *((char *)main + i));
+		printf("Error\n");
+		return (1);
+	}
+
+	limit = atoi(argv[1]);
+
+	while (i < limit)
+	{
+		printf("%s%02hhx", sep, *((char *)main + i));
+		sep = " ";
 		i++;
 	}
 
+	printf("\n");
 	return (0);
 }
