@@ -109,24 +109,20 @@ void print_all(const char * const format, ...)
 
 	a = 0;
 
-	if (format != NULL)
+	while (format && format[a])
 	{
-		while (format[a] && format != NULL)
+		b = 0;
+		while (ops[b].op)
 		{
-			b = 0;
-			while (ops[b].op)
+			if (*(ops[b].op) == format[a])
 			{
-				if (*(ops[b].op) == format[a])
-				{
-					(*ops[b].f)(ap, comma);
-					comma = ", ";
-					break;
-				}
-
-				b++;
+				(*ops[b].f)(ap, comma);
+				comma = ", ";
+				break;
 			}
-			a++;
+			b++;
 		}
+		a++;
 	}
 
 	printf("\n");
