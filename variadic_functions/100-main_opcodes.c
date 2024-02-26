@@ -27,6 +27,12 @@ int main(int argc, char *argv[])
 
 	limit = atoi(argv[1]);
 
+	if (limit < 0)
+	{
+		printf("Error\n");
+		return (2);
+	}
+
 	while (i < limit)
 	{
 		printf("%s%02hhx", sep, *((char *)main + i));
