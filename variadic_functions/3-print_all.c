@@ -60,6 +60,8 @@ void printf_s(va_list p_ap, char *comma)
 	char *s;
 
 	s = va_arg(p_ap, char *);
+	if (s == NULL)
+		s = "(nil)";
 	printf("%s%s", comma, s);
 }
 
