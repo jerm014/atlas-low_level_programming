@@ -1,6 +1,6 @@
 # C - Singly linked lists (Project 2168)
 
-!(giphy-3.gif)
+![](giphy-3.gif)
 
 ## Resources
 
