@@ -43,7 +43,7 @@ At the end of this project, you are expected to be able to explain to anyone, **
 
 Please use this data structure for this project:
 
-----
+`
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -59,4 +59,4 @@ typedef struct list_s
     struct list_s *next;
 } list_t; 
 
-----
+`
