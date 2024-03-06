@@ -1,5 +1,12 @@
 # C - Singly linked lists (Project 2168)
 
+### Concepts
+
+_For this project, we expect you to look at this concept:_
+
+* [Data Structures](concepts_889.md)
+
+
 ![](giphy-3.gif)
 
 ## Resources
