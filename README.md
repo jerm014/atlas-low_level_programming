@@ -16,3 +16,5 @@
 * [C - Structures, typedef (Project 2164)](structures_typedef)
 * [C - Function pointers (Proejct 2165)](function_pointers)
 * [C - Variadic functions (Project 2166)](variadic_functions)
+* [C - \_printf (Project 2167)](https://github.com/aallm004/atlas-printf)
+* [C - Singly linked list (Project 2168)](singly_linked_lists)
