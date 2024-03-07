@@ -34,7 +34,7 @@ list_t *add_node_end(list_t **, const char *);
 /* 4 */
 void free_list(list_t *);
 
-/* 2 asssit */
+/* 2 & 3 asssit */
 char *_strcpyconst(char *, const char *);
 int _strlenconst(const char *);
 
