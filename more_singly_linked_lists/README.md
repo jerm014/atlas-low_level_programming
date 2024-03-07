@@ -5,9 +5,8 @@
 
 ** Read or watch:**
 
-* Google
-* Youtube
-
+* [Google](https://www.google.com/?q=linked+lists)
+* [Youtube](https://www.youtube.com/results?search_query=linked+lists)
 
 # Learning Objectives
 
