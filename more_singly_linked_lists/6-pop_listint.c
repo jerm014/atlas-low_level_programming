@@ -15,7 +15,7 @@ int pop_listint(listint_t **node)
 	listint_t *temp_node;
 	int n = 0;
 
-	if (node != NULL)
+	if (*node != NULL)
 	{
 		temp_node = *node;
 		n = temp_node->n;
