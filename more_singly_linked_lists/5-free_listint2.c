@@ -15,11 +15,11 @@
 
 void free_listint2(listint_t **node)
 {
-	if (node == NULL)
-		return (node);
-
-	free_listint(*node);
-	*node = NULL;
+	if (node != NULL)
+	{
+		free_listint(*node);
+		*node = NULL;
+	}
 }
 
 
