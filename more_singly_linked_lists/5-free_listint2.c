@@ -16,7 +16,7 @@
 void free_listint2(listint_t **node)
 {
 	if (node == NULL)
-		return (0);
+		return (NULL);
 
 	free_listint(*node);
 	*node = NULL;
