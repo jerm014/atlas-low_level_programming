@@ -20,22 +20,22 @@
  *
  * @node:                   the head node of a listint_t linked list
  * @index:                  the index at which to insert the new node
- * @n:                      the data to put in the new node
+ * @i:                      the data to put in the new node
  *
  * Return:                  the address of the new node or NULL if failure
  *
  */
 
-listint_t *insert_nodeint_at_index(listint_t **node, unsigned int index, int data)
+listint_t *insert_nodeint_at_index(listint_t **node, unsigned int index, int i)
 {
-	unsigned int count = 1;
+	unsigned int count = 0;
 	listint_t *temp_node;
 	listint_t *new_node;
 
 	temp_node = *node;
 
 	if (index == 0)
-		return(add_nodeint(node, data));
+		return (add_nodeint(node, data));
 
 	new_node = malloc(sizeof(listint_t));
 	if (new_node == NULL || temp_node == NULL)
@@ -45,7 +45,7 @@ listint_t *insert_nodeint_at_index(listint_t **node, unsigned int index, int dat
 	{
 		temp_node = temp_node->next;
 		count++;
-        }
+	}
 
 	if (count == index - 1)
 	{
