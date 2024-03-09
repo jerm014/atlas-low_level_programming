@@ -38,18 +38,17 @@ listint_t *insert_nodeint_at_index(listint_t **node, unsigned int index, int n)
 	if (new_node == NULL || temp_node == NULL)
 		return (NULL);
 
-	while (count + 1 < index)
+	while ((count + 1 < index) && temp)
 	{
-		if (temp_node->next)
-			temp_node = temp_node->next;
-		else
-			return (NULL);
+		temp_node = temp_node->next;
 		count++;
         }
 
-	new_node->n = n;
-	new_node->next = temp_node->next;
-	temp_node->next = new_node;
+	if (pos == idx - 1)
+	{
+		new_node->next = temp_node->next;
+		temp_node->next = new_node;
+	}
 
 	return (new_node);
 }
