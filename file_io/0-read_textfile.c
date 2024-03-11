@@ -13,33 +13,28 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fptr;
+	int fd;
 	char ch;
-	char *pch;
-	size_t i;
-
-	pch = p;
+	size_t i = 1;
+	size_t out = 0;
 
 	if (!filename)
 		return (0);
 
-	fptr = fopen(filename, "r");
+	fd = open(filename, O_RDONLY);
 
-	if (!fptr)
+	if (!fd)
 		return (0);
-
-	for (i = 0; ((i < letters) && (ch != EOF)); i++)
+	while (i && (out <= letters))
 	{
-		ch = read(fptr, pch, 1);
-		if (!ch)
-		{
-			fclose(fptr);
-			return (0);
-		}
-		write(1, &ch, 1);
+		i = read(fd, &ch, 1);
+
+		if (i)
+			write(1, &ch, 1);
+		
+		out++;
 	}
 
-	fclose(fptr);
-	return (--i);
+	return (--out);
 
 }
