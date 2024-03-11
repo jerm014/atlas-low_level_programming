@@ -35,7 +35,7 @@ int main(int ac, char **av)
 	if (strcmp(file, "NULL") == 0)
 		file = NULL;
 	size = atoi(av[2]);
-	n = read_textfile(av[1], size);
+	n = read_textfile(NULL, size);
 	printf("\n(printed chars: %li)\n", n);
 	fd2 = open("0-read_textfile.c", O_RDONLY);
 	if (fd2 == -1)
