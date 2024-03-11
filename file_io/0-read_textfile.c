@@ -18,21 +18,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t i = 1;
 	size_t out = 0;
 
-	if (filename[0] == '\0')
+	if (*filename == NULL)
 		return (0);
 
 	fd = open(filename, O_RDONLY);
 
 	if (!fd)
 		return (0);
+
 	while (i && (out < letters))
 	{
 		i = read(fd, &ch, 1);
 
 		if (i)
+		{
 			write(1, &ch, 1);
-		
-		out += i;
+			out++;
+		}
 	}
 
 	close(fd);
