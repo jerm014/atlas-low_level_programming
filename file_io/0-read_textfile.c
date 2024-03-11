@@ -15,7 +15,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fptr;
 	char ch;
+	char *pch;
 	size_t i;
+
+	pch = p;
 
 	if (!filename)
 		return (0);
@@ -27,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; ((i < letters) && (ch != EOF)); i++)
 	{
-		ch = fgetc(fptr);
+		ch = read(fptr, pch, 1);
 		if (!ch)
 		{
 			fclose(fptr);
