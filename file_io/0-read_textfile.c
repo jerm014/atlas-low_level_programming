@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			fclose(fptr);
 			return (0);
 		}
-		write (1, &ch, 1);
+		write(1, &ch, 1);
 	}
 
 	fclose(fptr);
