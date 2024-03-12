@@ -61,16 +61,18 @@ int main(int argc, char *argv[])
 	if (read_val == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
-		if (close(file_from) == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close %s\n", argv[1]);
-			return (100);
-		}
-		if (close(file_to) == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close %s\n", argv[2]);
-			return (100);
-		}
+		return (98);
+	}
+		
+	if (close(file_from) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %s\n", argv[1]);
+		return (100);
+	}
+	if (close(file_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %s\n", argv[2]);
+		return (100);
 	}
 
 	return (0);
