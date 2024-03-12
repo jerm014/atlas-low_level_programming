@@ -15,7 +15,7 @@
 int create_file(const char *filename, char *text)
 {
 	int fd;
-	size_t out_bytes;
+	int out_bytes;
 
 	if (filename == NULL)
 		return (-1);
