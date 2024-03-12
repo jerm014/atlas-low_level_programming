@@ -6,8 +6,8 @@
  * @filename:           a pointer to a string that has the filename in it
  * @text:               the text to put in the file
  *
- * Return:              1 for success; -1 on failure (ex; NULL filename or write
- *                      fail)
+ * Return:              1 for success; -1 on failure (ex; NULL filename or
+ *                      write fail)
  *
  */
 
