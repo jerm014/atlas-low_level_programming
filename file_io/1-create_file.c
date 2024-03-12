@@ -28,7 +28,7 @@ int create_file(const char *filename, char *text)
 	if (text)
 	{
 		out_bytes = write(fd, text, _strlen(text));
-		if (bytes == -1)
+		if (out_bytes == -1)
 		{
 			close(fd);
 			return (-1);
