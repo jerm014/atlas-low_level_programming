@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 			close(file_to);
 			return (98);
 		}
-		if (clode(file_from) == -1)
+		if (close(file_from) == -1)
 		{
 			printf("Error: Can't close %d", file_from);
 			return (100);
