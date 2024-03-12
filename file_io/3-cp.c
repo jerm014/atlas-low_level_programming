@@ -1,4 +1,5 @@
 #include "main.h"
+int betty(void);
 
 /**
  * main-  main entry point for program
@@ -12,45 +13,56 @@
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, read_val = 1, write_val;
-	char buffer[1024];
+	int fd_from, fd_to, text_read, text_written;
+	char buffer[BUF_SIZE];
 
 	if (argc != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
-		exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		return (97);
 	}
 
-	file_from = open(argv[1], O_RDONLY);
-	if (file_from == -1)
-		return (cant_read(argv[1], 98));
-	
-	file_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
-	if (file_to == -1)
-		cant_write(argv[2], 99);
-
-	while ((read_val = read(file_from, buffer, 1024)) > 0)
-	{
-		write_val = write(file_to, buffer, read_val);
-		if (write_val != read_val)
+	fd_from = open(argv[1], O_RDONLY);
+		if (fd_from == -1)
 		{
-			cant_write(argv[2], 0);
-			if (close(file_from) == -1)
-				return (cant_close(argv[1], 100));
-
-			if (close(file_to) == -1)
-				return (cant_close(argv[2], 100));
-
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			return (98);
 		}
+
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+		if (fd_to == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			close(fd_from);
+			return (99);
+		}
+
+		while ((text_read = read(fd_from, buffer, BUF_SIZE)) > 0)
+		{
+			text_written = write(fd_to, buffer, text_read);
+				if (text_written != text_read)
+				{
+					dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+					close(fd_from);
+					close(fd_to);
+					return (99);
+				}
+		}
+
+	if (text_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		close(fd_from);
+		close(fd_to);
+		return (98);
 	}
 
-	if (read_val == -1)
-		return (cant_read(argv[1], 98));
-	if (close(file_from) == -1)
-		return (cant_close(argv[1], 100));
-	if (close(file_to) == -1)
-		return (cant_close(argv[2], 100));
+	if (close(fd_from) == -1)
+		return(cant_close(fd_from, 100));
+
+	if (close(fd_to) == -1)
+		return (cant_close(fd_to, 100));
+
 	return (0);
 }
 
@@ -64,9 +76,9 @@ int main(int argc, char *argv[])
  *
  */
 
-int cant_close(char *filename, int ret)
+int cant_close(int filename, int ret)
 {
-	dprintf(STDERR_FILENO, "Error: Can't close %s\n", filename);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filename);
 	return (ret);
 }
 
