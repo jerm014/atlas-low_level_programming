@@ -27,7 +27,7 @@ int create_file(const char *filename, char *text)
 
 	if (text)
 	{
-		out_bytes = write(fd, text, strlen(text));
+		out_bytes = write(fd, text, _strlen(text));
 		if (bytes == -1)
 		{
 			close(fd);
@@ -37,4 +37,23 @@ int create_file(const char *filename, char *text)
 
 	close(fd);
 	return (1);
+}
+
+/**
+ * _strlen-  determine the length of a string
+ *
+ * @s:       the string to find the longness of
+ *
+ * Return:   the longness of the string
+ *
+ */
+
+int _strlen(char *s)
+{
+	int pos = 0;
+
+	while (s[pos] != 0)
+		pos++;
+
+	return (pos);
 }
