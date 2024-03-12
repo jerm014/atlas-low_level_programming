@@ -29,32 +29,46 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (file_from == -1)
 	{
-		printf("Error: Can't read from %s\n",argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from %s\n",argv[1]);
 		exit(98);
 	}
 	if (file_to == -1)
 	{
-		printf("Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while (read_val > 0)
+	while (read_val = read(file_from, buffer, 1024)) > 0)
 	{
 		write_val = write(file_to, buffer, read_val);
 		if (write_val != read_val)
 		{
-			printf("Error: can't write to %s\n", argv[2]);
-			close(file_from);
-			close(file_to);
+			dprintf(STDERR_FILENO, "Error: can't write to %s\n", file_to);
+		
+			if (close(file_from) == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't close %d", file_from);
+				return (100);
+			}
+			if (close(file_to) == -1)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't close %d", file_to);
+				return (100);
+			}
 			return (98);
 		}
+	}
+
+	if (read_val == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		if (close(file_from) == -1)
 		{
-			printf("Error: Can't close %d", file_from);
+			dprintf(STDERR_FILENO, "Error: Can't close %s\n", file_from);
 			return (100);
 		}
 		if (close(file_to) == -1)
 		{
-			printf("Error: Can't close %d", file_to);
+			dprintf(STDERR_FILENO, "Error: Cant close %s\n", file_to);
 			return (100);
 		}
 	}
