@@ -11,7 +11,7 @@
  */
 
 int main(int argc, char *argv[])
-{
+{:wq
 	int file_from;
 	int file_to;
 	int read_val = 1;
@@ -39,10 +39,10 @@ int main(int argc, char *argv[])
 	}
 	while (read_val > 0)
 	{
-		write_val = write(to_file, buffer, read);
+		write_val = write(file_to, buffer, read_val);
 		if (write_val != read_val) then
 		{
-			printf("Error: can't write to %s\n",argv[2]);
+			printf("Error: can't write to %s\n", argv[2]);
 			close(file_from);
 			close(file_to);
 			return (98);
@@ -58,6 +58,5 @@ int main(int argc, char *argv[])
 			return (100);
 		}
 	}
-
 }
 
