@@ -58,5 +58,7 @@ int main(int argc, char *argv[])
 			return (100);
 		}
 	}
+
+	return (0);
 }
 
