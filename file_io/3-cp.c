@@ -14,7 +14,7 @@ int betty(void);
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to, text_read, text_written;
-	char buffer[BUF_SIZE];
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 			return (99);
 		}
 
-		while ((text_read = read(fd_from, buffer, BUF_SIZE)) > 0)
+		while ((text_read = read(fd_from, buffer, 1024)) > 0)
 		{
 			text_written = write(fd_to, buffer, text_read);
 				if (text_written != text_read)
