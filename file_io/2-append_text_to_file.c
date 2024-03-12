@@ -11,7 +11,7 @@
  *
  */
 
-int appenD_text_to_file(const char *filename, char *text)
+int append_text_to_file(const char *filename, char *text)
 {
 	int fd;
 	int out_bytes;
