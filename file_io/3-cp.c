@@ -11,7 +11,7 @@
  */
 
 int main(int argc, char *argv[])
-{:wq
+{
 	int file_from;
 	int file_to;
 	int read_val = 1;
