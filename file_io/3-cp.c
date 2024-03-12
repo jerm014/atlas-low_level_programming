@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	while (read_val > 0)
 	{
 		write_val = write(file_to, buffer, read_val);
-		if (write_val != read_val) then
+		if (write_val != read_val)
 		{
 			printf("Error: can't write to %s\n", argv[2]);
 			close(file_from);
