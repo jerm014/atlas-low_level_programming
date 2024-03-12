@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 {
 	int file_from;
 	int file_to;
-	int read = 1;
-	int write;
+	int read_val = 1;
+	int write_val;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	}
 
 	file_from = open(argv[1], O_RDONLY);
-	read = read(file_from, buffer, 1024);
+	read_val = read(file_from, buffer, 1024);
 	file_to = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (file_from == -1)
 	{
@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
 		printf("Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while (read > 0)
+	while (read_val > 0)
 	{
-		write = write(to_file, buffer, read);
-		if (write != read) then
+		write_val = write(to_file, buffer, read);
+		if (write_val != read_val) then
 		{
 			printf("Error: can't write to %s\n",argv[2]);
 			close(file_from);
