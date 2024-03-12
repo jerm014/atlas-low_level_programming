@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 	}
 
 	if (close(fd_from) == -1)
-		return(cant_close(fd_from, 100));
+		return (cant_close(fd_from, 100));
 
 	if (close(fd_to) == -1)
 		return (cant_close(fd_to, 100));
