@@ -11,7 +11,7 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t i = 1;
+	size_t i = 0;
 
 	while (h)
 	{
@@ -19,5 +19,5 @@ size_t print_dlistint(const dlistint_t *h)
 		i++;
 		h = h->next;
 	}
-	return (--i);
+	return (i);
 }
