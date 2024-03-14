@@ -2,11 +2,11 @@
 
 /**
  * free_dlistint- free a dlistint_t list
- * 
+ *
  * @node:         the head node of a dlistint_t list
- * 
+ *
  * Return:        nothing
- * 
+ *
 */
 
 void free_dlistint(dlistint_t *node)
