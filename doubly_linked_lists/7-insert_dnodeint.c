@@ -24,7 +24,7 @@ dlistint_t
 		return (add_dnodeint(node, n));
 
 	if (index == dlistint_len(*node))
-		return(add_dnodeint_end(*node, n));
+		return(add_dnodeint_end(node, n));
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
