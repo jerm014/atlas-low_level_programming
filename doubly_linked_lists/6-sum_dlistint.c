@@ -6,7 +6,7 @@
  * @node:        the head node of a dlistint_t linked list
  *
  * Return:       int; the number of nodes
- * 
+ *
 */
 
 int sum_dlistint(dlistint_t *node)
