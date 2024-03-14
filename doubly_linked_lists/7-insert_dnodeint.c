@@ -23,6 +23,10 @@ dlistint_t
 	if (index == 0)
 		return (add_dnodeint(node, n));
 
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+
 	while ((count + 1 < index) && temp_node)
 	{
 		temp_node = temp_node->next;
@@ -41,7 +45,7 @@ dlistint_t
 			temp_node = temp_node->next;
 			temp_node->prev = new_node;
 		}
-		
+
 		return (new_node);
 	}
 
