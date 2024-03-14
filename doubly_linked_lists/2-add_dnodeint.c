@@ -33,7 +33,11 @@ dlistint_t *add_dnodeint(dlistint_t **node, const int n)
 	new_node->n = n;
 	new_node->next = *node;
 
-	(*node)->prev = new_node;
+	if (*node)
+		(*node)->prev = new_node;
+	else
+		new_node->prev = NULL;
+		
 	*node = new_node;
 
 	return (*node);
