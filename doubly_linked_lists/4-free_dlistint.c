@@ -11,8 +11,11 @@
 
 void free_dlistint(dlistint_t *node)
 {
-	if (node->next != NULL && node != NULL)
-		free_dlistint(node->next);
+	if (node)
+	{
+		if (node->next != NULL)
+			free_dlistint(node->next);
 
-	free(node);
+		free(node);
+	}
 }
