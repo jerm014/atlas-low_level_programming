@@ -39,11 +39,12 @@ dlistint_t
 	if (count == index - 1)
 	{
 		new_node->n = n;
-		(temp_node->prev)->prev = new_node;
-		new_node->prev = temp_node->prev;
-		new_node->next = temp_node;
+		
+		new_node->next = temp_node->next;
+		new_node->prev = temp_node;
+		new_node->next->prev = new_node;
 		temp_node->next = new_node;
-
+		
 		return (new_node);
 	}
 
