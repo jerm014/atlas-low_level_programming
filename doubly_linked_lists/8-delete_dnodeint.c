@@ -15,7 +15,6 @@ int delete_dnodeint_at_index(dlistint_t **node, unsigned int index)
 {
 	unsigned int count = 0;
 	dlistint_t *temp_node;
-	dlistint_t *new_node;
 
 	temp_node = *node;
 
