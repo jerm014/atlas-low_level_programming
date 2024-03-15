@@ -40,10 +40,10 @@ dlistint_t
 	{
 		new_node->n = n;
 
-		new_node->next = temp_node->next;
-		new_node->prev = temp_node;
-		new_node->next->prev = new_node;
-		temp_node->next = new_node;
+		new_node->next = temp_node->next; //2
+		new_node->prev = temp_node; //1
+		new_node->next->prev = new_node; //3
+		temp_node->next = new_node; //4
 
 		return (new_node);
 	}
@@ -52,7 +52,7 @@ dlistint_t
 }
 
 /**
- * dlistint_len- print all the elements of a dlistint_t list
+ * dlistint_len-   count the elements of a dlistint_t list
  *
  * @h:             pointer to the head of the dlistint_t list
  *
