@@ -54,12 +54,12 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 }
 
 /**
- * delete_node_at_index- delete the node at index of a listint_t linked list
+ * delete_node_by_key- delete the node at index of a listint_t linked list
  *
- * @node:                   the head node in a linked list
- * @index:                  the index of the node to delete, 0 based
+ * @node:              the head node in a linked list
+ * @index:             the index of the node to delete, 0 based
  *
- * Return:                  1 success, -1 fail
+ * Return:             1 success, -1 fail
  *
  */
 
