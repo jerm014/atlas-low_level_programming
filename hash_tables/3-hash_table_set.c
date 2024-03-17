@@ -65,7 +65,6 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 
 int delete_node_by_key(hash_node_t **node, const char *key)
 {
-	unsigned int count = 0;
 	hash_node_t *temp_node = *node;
 	hash_node_t *delete_node;
 
