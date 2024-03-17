@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 		table->array[index] = new_node;
 	else
 	{
-		delete_node(table->array[index], key);
+		delete_node_by_key(table->array[index], key);
 		new_node->next = table->array[index];
 		table->array[index] = new_node;
 	}
@@ -54,19 +54,39 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 }
 
 /**
- * delete_node- remove a node if it exists
- * 
- * @node:       a node to start looking at
- * @key:        the thing to find
- * 
- * Return:      0 
- * 
-*/
+ * delete_node_at_index- delete the node at index of a listint_t linked list
+ *
+ * @node:                   the head node in a linked list
+ * @index:                  the index of the node to delete, 0 based
+ *
+ * Return:                  1 success, -1 fail
+ *
+ */
 
-int delete_node(hash_node_t *node, char *key)
+int delete_node_by_key(hash_node_t **node, char *key)
 {
-	while (node)
-	{
+	unsigned int count = 0;
+	hash_node_t *temp_node = *node;
+	hash_node_t *delete_node;
 
+	if (*node == NULL)
+		return (-1);
+
+	while (temp_node)
+	{
+		if (strcomp(temp_node->key, key) == 0)
+			break;
+		temp_node = temp_node->next;
 	}
+
+	if (temp_node)
+	{
+		delete_node = temp_node->next;
+		temp_node->next = delete_node->next;
+		free(delete_node);
+		return (1);
+	}
+
+	return (-1);
+
 }
