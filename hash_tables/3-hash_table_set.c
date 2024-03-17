@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 		free(new_node);
 		return (0);
 	}
-
+ 
 	new_node->key = memcpy(new_node->key, key, strlen(key) + 1);
 	new_node->value = memcpy(new_node->value, value, strlen(value) + 1);
 	new_node->next = NULL;
@@ -47,10 +47,29 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 		table->array[index] = new_node;
 	else
 	{
+		delete_node(table->array[index], key);
 		temp_node = table->array[index];
 		new_node->next = temp_node;
 		table->array[index] = new_node;
 	}
 
 	return (1);
+}
+
+/**
+ * delete_node- remove a node if it exists
+ * 
+ * @node:       a node to start looking at
+ * @key:        the thing to find
+ * 
+ * Return:      0 
+ * 
+*/
+
+int delete_node(hash_node_t *node, char *key)
+{
+	while (node)
+	{
+			
+	}
 }
