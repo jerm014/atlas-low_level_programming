@@ -15,27 +15,25 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 {
 	hash_node_t *new_node;
 	hash_node_t *temp_node;
-	char *new_key;
-	char *new_value;
-	int index;
+	unsigned long int index;
 
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL || table == NULL || key == NULL || value == NULL)
-		return (NULL);
+		return (0);
 
-	index = key_index(key, table->size);
+	index = key_index((const unsigned char*)key, table->size);
 	temp_node = table->array[index];
-	
+
 	new_node->key = malloc(strlen(key) + 1);
 	if (new_node->key == NULL)
-		return (NULL);
+		return (0);
 	
 	new_node->value = malloc(strlen(value) + 1);
 	if (new_node->value == NULL)
-		return (NULL);
+		return (0);
 
-	new_node->key = strcpy(new_node->key, key);
-	new_node->value = strcpy(new_node->value, value);
+	new_node->key = memcpy(new_node->key, key, strlen(key) + 1);
+	new_node->value = memcpy(new_node->value, value, strlen(value) + 1);
 	new_node->next = NULL;
 
 	if (table->array[index] == NULL)
