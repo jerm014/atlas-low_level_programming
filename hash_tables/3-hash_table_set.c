@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 		table->array[index] = new_node;
 	else
 	{
-		delete_node_by_key(table->array[index], key);
+		delete_node_by_key(&(table->array[index]), key);
 		new_node->next = table->array[index];
 		table->array[index] = new_node;
 	}
