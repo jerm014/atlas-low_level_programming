@@ -74,7 +74,7 @@ int delete_node_by_key(hash_node_t **node, char *key)
 
 	while (temp_node)
 	{
-		if (strcomp(temp_node->key, key) == 0)
+		if (strcmp(temp_node->key, key) == 0)
 			break;
 		temp_node = temp_node->next;
 	}
