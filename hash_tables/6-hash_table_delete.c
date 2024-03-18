@@ -17,6 +17,8 @@ void hash_table_delete(hash_table_t *table)
 	{
 		if (table->array[i])
 			hash_node_delete(table->array[i]);
+
+		i++;
 	}
 	free(table);
 }
