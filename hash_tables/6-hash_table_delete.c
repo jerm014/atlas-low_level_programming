@@ -23,6 +23,7 @@ void hash_table_delete(hash_table_t *table)
 		i++;
 	}
 	/*printf("free table\n");*/
+	free(*table->array);
 	free(table->array);
 	free(table);
 }
