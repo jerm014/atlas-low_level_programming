@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, table->size);
 
-	if (replace_node_by_key(table->array[index], key, value))
+	if (update_node_by_key(table->array[index], key, value))
 		return (1);
 
 	new_node->key = strdup(key);
@@ -43,7 +43,7 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 }
 
 /**
- * replace_node_by_key- find and replace the node value if a matching node key
+ * update_node_by_key- find and replace the node value if a matching node key
  *                      is found
  *
  * @node:               the head node in a singly linked list
@@ -54,7 +54,7 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
  *
  */
 
-int replace_node_by_key(hash_node_t *node, const char *key, const char *value)
+int update_node_by_key(hash_node_t *node, const char *key, const char *value)
 {
 	hash_node_t *temp_node = node;
 
