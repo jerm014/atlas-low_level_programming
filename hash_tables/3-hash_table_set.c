@@ -26,7 +26,10 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 	index = key_index((const unsigned char *)key, table->size);
 
 	if (update_node_by_key(table->array[index], key, value))
+	{
+		free(new_node);
 		return (1);
+	}
 
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
