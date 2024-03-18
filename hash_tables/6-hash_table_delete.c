@@ -16,13 +16,13 @@ void hash_table_delete(hash_table_t *table)
 	while (i < table->size)
 	{
 		if (table->array[i])
-			free_hash_node_t(table->array[i]);
+			hash_node_delete(table->array[i]);
 	}
 	free(table);
 }
 
 /**
- * free_hash_node_t- free a list of linked hash nodes
+ * hash_node_delete- free a list of linked hash nodes
  *
  * @node:            the head node of a listint_t list
  *
@@ -30,7 +30,7 @@ void hash_table_delete(hash_table_t *table)
  *
  */
 
-void free_hash_node_t(hash_node_t *node)
+void hash_node_delete(hash_node_t *node)
 {
 	hash_node_t *temp_node;
 
