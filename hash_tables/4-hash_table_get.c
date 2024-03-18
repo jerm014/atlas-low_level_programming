@@ -3,7 +3,8 @@
 /**
  * hash_table_get- get a value from a hash table based on a key
  *
- * @key:           the key to find the value for
+ * @table:         a pointer to the hash table to search
+ * @key:           a pointer to the key to find the value for, a string
  *
  * Return:         a pointer to the string that was in value for key
  *
