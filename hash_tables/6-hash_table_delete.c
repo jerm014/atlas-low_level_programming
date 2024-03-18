@@ -15,14 +15,14 @@ void hash_table_delete(hash_table_t *table)
 
 	while (i < table->size)
 	{
-		if (i % 75 == 0)
-			printf("free %lu\n", i);
+		/*if (i % 75 == 0) */
+		/*	printf("free %lu\n", i); */
 		if (table->array[i])
 			hash_node_delete(table->array[i]);
 
 		i++;
 	}
-	printf("free table\n");
+	/* printf("free table\n"); */
 	free(table);
 }
 
@@ -43,7 +43,9 @@ void hash_node_delete(hash_node_t *node)
 	{
 		temp_node = node;
 		node = node->next;
-		printf("freeing node %s", temp_node->key);
+		/* printf("freeing node %s", temp_node->key); */
+		free(temp_node->key);
+		free(temp_node->value);
 		free(temp_node);
 	}
 }
