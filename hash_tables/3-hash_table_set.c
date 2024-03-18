@@ -1,4 +1,7 @@
+#ifndef _3_HASH_TABLE_SET_C_
+#define _2_HASH_TABLE_SET_C_
 #include "hash_tables.h"
+
 #include "0-hash_table_create.c"
 #include "1-djb2.c"
 #include "2-key_index.c"
@@ -78,3 +81,4 @@ int replace_node_by_key(hash_node_t *node, const char *key, const char *value)
 	return (0);
 
 }
+#endif

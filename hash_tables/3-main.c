@@ -1,3 +1,5 @@
+#ifndef _3_MAIN_C_
+#define _3_MAIN_C_
 #include "hash_tables.h"
 
 /**
@@ -19,3 +21,4 @@ int main(void)
 	hash_table_set(ht, "betty4", "444cool");
 	return (EXIT_SUCCESS);
 }
+#endif

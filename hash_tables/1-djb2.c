@@ -1,3 +1,6 @@
+#ifndef _1_DJB2_C_
+#define _1_DJB2_C_
+#include "hash_tables.h"
 
 /**
  * hash_djb2 - implementation of the djb2 algorithm
@@ -18,3 +21,4 @@ unsigned long int hash_djb2(const unsigned char *str)
 	}
 	return (hash);
 }
+#endif
