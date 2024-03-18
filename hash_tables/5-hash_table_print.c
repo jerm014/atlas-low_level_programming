@@ -2,9 +2,9 @@
 
 /**
  * hash_table_print- print the contents of a hash table.
- * 
+ *
  * @table:           the hash table to print
- * 
+ *
  * Return:           nothing
 */
 
@@ -23,13 +23,14 @@ void hash_table_print(const hash_table_t *table)
 			{
 				node = table->array[index];
 				while (node)
-					{
-						if (!first)
-							printf(", ");
-						printf("'%s': '%s'", node->key, node->value);
-						first = 0;
-						node = node->next;
-					}
+				{
+					if (!first)
+						printf(", ");
+					printf("'%s': '%s'", node->key, node->value);
+					first = 0;
+					node = node->next;
+				}
+				
 			}
 			index++;
 		}
