@@ -1,4 +1,8 @@
 #include "hash_tables.h"
+#include "0-hash_table_create.c"
+#include "1-djb2.c"
+#include "2-key_index.c"
+#include "3-main.c"
 
 /**
  * hash_table_set- add an element to a hash table
@@ -22,30 +26,19 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, table->size);
 
-	new_node->key = malloc(strlen(key) + 1);
-	if (new_node->key == NULL)
-	{
-		free(new_node);
-		return (0);
-	}
+	if (replace_node_by_key(table->array[index], key, value))
+		return (1);
 
-	new_node->value = malloc(strlen(value) + 1);
-	if (new_node->value == NULL)
-	{
-		free(new_node->key);
-		free(new_node);
-		return (0);
-	}
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
  
-	new_node->key = memcpy(new_node->key, key, strlen(key) + 1);
-	new_node->value = memcpy(new_node->value, value, strlen(value) + 1);
-	new_node->next = NULL;
-
 	if (table->array[index] == NULL)
+	{
+		new_node->next = NULL;
 		table->array[index] = new_node;
+	}
 	else
 	{
-		delete_node_by_key(&(table->array[index]), key);
 		new_node->next = table->array[index];
 		table->array[index] = new_node;
 	}
@@ -54,38 +47,34 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 }
 
 /**
- * delete_node_by_key- delete the node at index of a listint_t linked list
+ * replace_node_by_key- find and replace the node value if a matching node key
+ *                      is found
  *
- * @node:              the head node in a linked list
- * @index:             the index of the node to delete, 0 based
+ * @node:               the head node in a singly linked list
+ * @key:                the key to match
+ * @value:              the value to replace
  *
- * Return:             1 success, -1 fail
+ * Return:              1 success, 0 fail
  *
  */
 
-int delete_node_by_key(hash_node_t **node, const char *key)
+int replace_node_by_key(hash_node_t *node, const char *key, const char *value)
 {
-	hash_node_t *temp_node = *node;
-	hash_node_t *delete_node;
+	hash_node_t *temp_node = node;
 
-	if (*node == NULL)
-		return (-1);
+	if (node == NULL)
+		return (0);
 
 	while (temp_node)
 	{
 		if (strcmp(temp_node->key, key) == 0)
-			break;
+		{
+			free(temp_node->value);
+			temp_node->value = strdup(value);
+			return (1);
+		}
 		temp_node = temp_node->next;
 	}
-
-	if (temp_node)
-	{
-		delete_node = temp_node->next;
-		temp_node->next = delete_node->next;
-		free(delete_node);
-		return (1);
-	}
-
-	return (-1);
+	return (0);
 
 }
