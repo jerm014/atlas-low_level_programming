@@ -1,6 +1,10 @@
-#ifndef _3_MAIN_C_
-#define _3_MAIN_C_
 #include "hash_tables.h"
+
+#include "0-hash_table_create.c"
+#include "1-djb2.c"
+#include "2-key_index.c"
+#include "3-main.c"
+
 
 /**
  * main -  check the code
@@ -21,4 +25,3 @@ int main(void)
 	hash_table_set(ht, "betty4", "444cool");
 	return (EXIT_SUCCESS);
 }
-#endif

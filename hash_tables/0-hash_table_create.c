@@ -1,5 +1,3 @@
-#ifndef _0_HASH_TABLE_CREATE_C_
-#define _0_HASH_TABLE_CREATE_C
 #include "hash_tables.h"
 
 /**
@@ -30,4 +28,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	return (table);
 }
-#endif
