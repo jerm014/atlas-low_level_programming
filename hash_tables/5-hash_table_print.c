@@ -14,9 +14,9 @@ void hash_table_print(const hash_table_t *table)
 	hash_node_t *node;
 	int first = 1;
 
-	printf("{");
 	if (table != NULL)
 	{
+		printf("{");
 		while (index < table->size)
 		{
 			if (table->array[index] != NULL)
@@ -33,7 +33,6 @@ void hash_table_print(const hash_table_t *table)
 			}
 			index++;
 		}
+		printf("}\n");
 	}
-	printf("}\n");
-
 }
