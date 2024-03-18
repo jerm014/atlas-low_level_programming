@@ -16,14 +16,14 @@ int hash_table_set(hash_table_t *table, const char *key, const char *value)
 	hash_node_t *new_node;
 	unsigned long int index;
 
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL || table == NULL || key == NULL || value == NULL)
+		return (0);
+
 	index = key_index((const unsigned char *)key, table->size);
 
 	if (replace_node_by_key(table->array[index], key, value))
 		return (1);
-
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL || table == NULL || key == NULL || value == NULL)
-		return (0);
 
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
