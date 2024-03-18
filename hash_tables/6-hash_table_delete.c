@@ -15,7 +15,7 @@ void hash_table_delete(hash_table_t *table)
 
 	while (i < table->size)
 	{
-		printf("free %d\n", i);
+		printf("free %lu\n", i);
 		if (table->array[i])
 			hash_node_delete(table->array[i]);
 
