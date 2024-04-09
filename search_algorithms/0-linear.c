@@ -10,7 +10,7 @@
  * Return: the index that value is found
  *
  */
-int linear_search(int array[], int size, int value);
+int linear_search(int array[], int size, int value)
 {
 	size_t i;
 
