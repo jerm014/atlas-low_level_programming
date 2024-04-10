@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include "1-main.c"
 
 /**
  * binary_search-  a function that searches for a value in a sorted array of
