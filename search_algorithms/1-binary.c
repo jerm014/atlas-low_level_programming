@@ -43,7 +43,7 @@ int binary_search_search(int *array, size_t start, size_t end, int value)
 	if (start != end)
 	{
 		if (value > array[half])
-			return (binary_search_search(array, (half + 1), end, value));
+			return (binary_search_search(array, (half, end, value));
 		else
 			return (binary_search_search(array, start, (half - 1), value));
 	}
